@@ -8,11 +8,11 @@ description: "Vietnam visa options for foreigners in 2026: e-visa application, 4
 
 
 
-# Vietnam Visa Guide for Foreigners: Every Option Explained (2026 Updated)
+# \# Vietnam Visa Guide for Foreigners: Every Option Explained (2026 Updated)
 
 Most of the visa advice you'll find online is outdated. Vietnam rewrote its visa rules in late 2023, and a lot has changed since then. This guide covers what actually applies in 2026 — the real entry options, exact costs, how to handle visa runs, and what happens if you overstay.
 
-## Quick Summary: Which Visa Do You Need?
+## \## Quick Summary: Which Visa Do You Need?
 
 Not sure where to start? Find your situation below.
 
@@ -27,17 +27,17 @@ Not sure where to start? Find your situation below.
 
 Pair any of these with travel medical insurance like [SafetyWing](https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador) that covers you across Southeast Asia, and you're set.
 
-## Before You Apply: The 6-Month Passport Rule
+## \## Before You Apply: The 6-Month Passport Rule
 
 This catches people every single week. Vietnam enforces a strict rule: **your passport must be valid for at least 6 months from your date of entry.** This is checked by both the airline at check-in and by immigration on arrival.
 
 Even if you have an approved E-visa in hand, airlines will deny you boarding if your passport has 5 months and 29 days of validity left. Check your expiration date before you book your flight.
 
-## The 2026 Visa Landscape: What Are Your Options?
+## \## The 2026 Visa Landscape: What Are Your Options?
 
 Vietnam overhauled its visa system in late 2023 under **Resolutions No. 127 and 128/NQ-CP**, and those rules remain the standard today.
 
-### 1\. Visa Exemption (The 45-Day Free Entry)
+### \### 1. Visa Exemption (The 45-Day Free Entry)
 
 Citizens from certain countries can enter Vietnam without applying for anything. As of early 2026, the following countries have unilateral visa exemption agreements with Vietnam:
 
@@ -50,7 +50,7 @@ This list has changed multiple times in recent years. **Always confirm the curre
 * **Who it's for:** Short-term tourists, snowbirds escaping the winter, or anyone testing the waters before committing to a longer stay.
 * **Money-saving tip:** If you're from one of these countries and staying less than 45 days, you do not need an E-visa. Don't waste $25-50 on one — just show up with your passport.
 
-### 2\. The 90-Day E-Visa
+### \### 2. The 90-Day E-Visa
 
 Vietnam does not have an official "Digital Nomad Visa." When people talk about living here as a remote worker, they're using the 90-day E-visa. This is the workhorse visa for most expats.
 
@@ -68,14 +68,14 @@ This confuses a lot of people. Both types have a **total validity of 90 days fro
 
 If you're staying in Vietnam the entire time and not leaving, a Single Entry E-visa is all you need. Save the $25 difference.
 
-### 3\. Long-Term Visas: Work Permits and TRC
+### \### 3. Long-Term Visas: Work Permits and TRC
 
 If you want to stay for years without doing visa runs every 90 days, you need a legitimate sponsor.
 
 * **Work Permit + TRC (Temporary Residence Card):** A Vietnamese employer sponsors your work permit, which you then use to apply for a 2-to-3-year TRC. This is the standard path for employed expats.
 * **Business Visa (DN):** Sponsored by a Vietnamese company for business activities. Valid for various durations. Be very careful about the sponsor — see the "Ghost Sponsors" warning below.
 
-### 4\. The 5-Year Visa Exemption Certificate
+### \### 4. The 5-Year Visa Exemption Certificate
 
 This is a lesser-known option specifically for:
 
@@ -98,13 +98,13 @@ Processing typically takes 5-7 working days. Many expats hire an agent ($100-150
 
 For expats who've married a Vietnamese partner but don't want or need a work permit, this is often the most practical long-term solution.
 
-### 5\. Visa on Arrival: No Longer Available for Regular Tourists
+### \### 5. Visa on Arrival: No Longer Available for Regular Tourists
 
 Pre-pandemic, you could buy an "Approval Letter" online and get your visa stamped at the airport. **Visa on Arrival is no longer available for regular tourists.** The system has not been restored for ordinary travelers since COVID.
 
 If an agency is currently selling you an "approval letter" for a tourist VoA, they are either scamming you or operating in a gray area. The airline may deny you boarding.
 
-## Visa Costs and Typical Agency Fees
+### \##  Visa Costs and Typical Agency Fees
 
 You don't need an agent for a standard E-visa. But if you're getting a Work Permit or TRC, an agent is almost essential. Here's what the market looks like so that you know if you're being overcharged.
 
@@ -118,7 +118,7 @@ You don't need an agent for a standard E-visa. But if you're getting a Work Perm
 |5-Year Exemption (Spouse/Viet Kieu)|\~$10 USD|$100 - $150 USD full service|
 |Work Permit + 2-Year TRC|Varies by province|$350 - $600 USD package|
 
-## Step-by-Step: Applying for the Vietnam E-Visa Yourself
+### \## Step-by-Step: Applying for the Vietnam E-Visa Yourself
 
 This takes about 15 minutes. Do not pay an agency $50+ for something you can do for $25.
 
@@ -132,13 +132,13 @@ This takes about 15 minutes. Do not pay an agency $50+ for something you can do 
 5. **⚠️ Select your Port of Entry — and get it right:** You must choose your entry point from a dropdown menu (e.g., Noi Bai Airport, Tan Son Nhat Airport, Moc Bai land border). **This choice is locked once approved.** If you select Noi Bai Airport but later decide to enter via the Moc Bai land border, immigration will deny you entry. You'll have to apply and pay for a completely new E-visa.
 6. **Pay and wait:** Official processing time is 3 working days, but allow 5-7 days around Vietnamese national holidays (Tet, Liberation Day, National Day).
 
-## Visa Runs: How to Reset Your Stay
+### \## Visa Runs: How to Reset Your Stay
 
 In-country extensions for tourist visas have become extremely unreliable and expensive. Some agents claim they can extend your E-visa without you leaving, but this typically involves gray-area visa type conversions that may cause problems later. Most expats find visa runs cheaper and more predictable.
 
 **The good news:** Vietnam's revised immigration law (Law No. 23/2023/QH15) abolished the old rule requiring a 30-day gap between visa-free entries. You can now leave and re-enter the same day with a new E-visa.
 
-### How It Works
+### \## How It Works
 
 1. Apply for your new 90-day E-visa **before** your current visa expires. Make sure to select the correct land border or airport as your Port of Entry.
 2. Travel to the border. The most popular routes:
@@ -152,7 +152,7 @@ In-country extensions for tourist visas have become extremely unreliable and exp
 
 If you're doing frequent visa runs, make sure your travel medical insurance like [SafetyWing](https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador) covers you while in transit across borders — some policies have gaps during overland crossings.
 
-### Expected Costs (Moc Bai / Cambodia Route — from HCMC)
+### \## Expected Costs (Moc Bai / Cambodia Route — from HCMC)
 
 |Item|Cost|
 |-|-|
@@ -162,7 +162,7 @@ If you're doing frequent visa runs, make sure your travel medical insurance like
 |Food and misc|$10-15 USD|
 |**Total**|**$80-120 USD**|
 
-### Expected Costs (Flight Route — from Hanoi)
+### \## Expected Costs (Flight Route — from Hanoi)
 
 |Item|Cost|
 |-|-|
@@ -171,7 +171,7 @@ If you're doing frequent visa runs, make sure your travel medical insurance like
 |1 night accommodation (optional)|$15-40 USD|
 |**Total**|**$120-290 USD**|
 
-## Overstaying Your Visa: The Penalties
+### \## Overstaying Your Visa: The Penalties
 
 Do not gamble with overstaying. Penalties under Decree 144/2021/ND-CP are enforced and escalate quickly:
 
@@ -189,7 +189,7 @@ For overstays under 15 days, you can usually pay the fine directly to immigratio
 
 **Scam warning:** If someone offers to "clear" a short overstay for $300 USD, ignore them. Go to the airport early, pay the official fine at the immigration counter, and leave. It's straightforward.
 
-## How to Find a Reliable Visa Agent
+### \## How to Find a Reliable Visa Agent
 
 You don't need an agent for a standard E-visa — do it yourself and save money. But for Work Permits, TRC applications, or urgent airport situations, a good agent is worth the fee.
 
@@ -207,7 +207,7 @@ You don't need an agent for a standard E-visa — do it yourself and save money.
 * Asks for your original passport to "hold" during the process (copies are fine, originals are not)
 * Quotes a price dramatically below the market range in the table above (they may cut corners or use fake sponsors)
 
-## Ghost Sponsors: The TRC Trap
+### \## Ghost Sponsors: The TRC Trap
 
 This deserves its own section because the consequences are severe.
 
@@ -222,7 +222,7 @@ There have been increasing reports of crackdowns by Vietnamese immigration polic
 
 If you want a legitimate long-term visa, either find real employment or explore the 5-Year Exemption route if you're married to a Vietnamese citizen.
 
-## FAQ
+### \## FAQ
 
 **Can I change my port of entry on an approved E-visa?**
 No. You must apply and pay for a completely new E-visa with the correct port of entry selected.
