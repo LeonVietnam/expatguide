@@ -2,23 +2,32 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// https://astro.build/config
 export default defineConfig({
+	site: 'https://expatguide.site',
 	integrations: [
 		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			title: 'ExpatGuide Vietnam',
+			social: [],
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'Visa',
+					autogenerate: { directory: 'vietnam/visa' },
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Housing',
+					autogenerate: { directory: 'vietnam/housing' },
+				},
+				{
+					label: 'Banking',
+					autogenerate: { directory: 'vietnam/banking' },
+				},
+				{
+					label: 'Daily Life',
+					autogenerate: { directory: 'vietnam/daily-life' },
+				},
+				{
+					label: 'Digital Nomad',
+					autogenerate: { directory: 'vietnam/digital-nomad' },
 				},
 			],
 		}),
