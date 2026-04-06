@@ -4,6 +4,10 @@ title: "The Complete Guide to Driving a Motorbike in Vietnam (2026 Updated)"
 description: "How to drive a motorbike legally in Vietnam as a foreigner — licenses, IDP rules, renting vs buying, insurance traps, dealing with traffic police, and scams to avoid. Updated for 2026."
 ---
 
+\---
+
+
+
 # The Complete Guide to Driving a Motorbike in Vietnam (2026 Updated)
 
 Riding a motorbike is how most expats get around in Vietnam. But doing it legally and safely takes more homework than you'd think. This guide covers the real licensing requirements, how to rent or buy without getting ripped off, what actually happens when police pull you over, and how to make sure your insurance won't abandon you after a crash.
