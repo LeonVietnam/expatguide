@@ -60,7 +60,7 @@ Parts of Thảo Điền (District 2) and District 7 — both popular with expats
 
 **Healthcare Costs Across All Three Cities**
 
-Whether it is a respiratory issue in Hanoi or a motorbike injury in Da Nang, out-of-pocket costs at private international clinics are steep. Nomads in Vietnam commonly use [SafetyWing Nomad Insurance](https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador) or [World Nomads Travel Insurance](https://www.worldnomads.com) as a baseline travel medical policy — review the policy terms carefully to understand coverage conditions, exclusions, and what documentation is required for claims.
+Whether it is a respiratory issue in Hanoi or a motorbike injury in Da Nang, out-of-pocket costs at private international clinics are steep. Nomads in Vietnam commonly use [SafetyWing Nomad Insurance](https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador) or World Nomads Travel Insurance as a baseline travel medical policy — review the policy terms carefully to understand coverage conditions, exclusions, and what documentation is required for claims.
 
 ## FAQ
 
@@ -79,5 +79,3 @@ Da Nang delivers the highest standard of living relative to cost, particularly f
 ## Summary
 
 Choose Saigon if career access and urban convenience are priorities. Choose Hanoi if you want deep cultural immersion and can manage the winter air quality with the right gear. Choose Da Nang for an affordable coastal base, provided you plan around typhoon season and the transient community dynamic.
-
-The next practical step after choosing a city is securing housing without legal exposure. Our **Housing & Lease Contract Guide** covers how to identify fair electricity billing rates and ensure your landlord completes your *Tạm Trú* registration correctly — coming soon.
