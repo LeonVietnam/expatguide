@@ -136,6 +136,6 @@ Bring your new TRC to the branch immediately after renewal and update your accou
 
 Banking in Vietnam in 2026 is not difficult if you have the right visa status and documents. If you hold a TRC, choose Techcombank for the app or Vietcombank for the ATM network, complete biometric registration at the branch on day one, request a Visa or Mastercard debit, activate Smart OTP, and manage your account around visa renewal dates.
 
-If you are on a tourist visa, use your home-country card for ATM withdrawals and [SafetyWing](https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador) or Wise for spending. Opening a local account is not worth pursuing until your residency status changes.
+If you are on a tourist visa, use your home-country card for ATM withdrawals and a [Wise multi-currency card](https://wise.com/invite/dic/ganqiuh) for fee-efficient spending. Opening a local account is not worth pursuing until your residency status changes.
 
 Your next practical step is securing legal housing and ensuring your landlord properly files your *Tạm Trú* registration — the same document your bank will ask for. Our **Housing & Lease Contract Guide** covers both in full — coming soon.
