@@ -3,8 +3,6 @@ title: "Vietnam Visa Guide for Foreigners: Every Option Explained (2026 Updated)
 description: "Vietnam visa options for foreigners in 2026: e-visa application, 45-day exemption, visa runs, overstay penalties, and how to get a Temporary Residence Card (TRC). Step-by-step with real costs."
 ---
 
-# Vietnam Visa Guide for Foreigners: Every Option Explained (2026 Updated)
-
 Most of the visa advice you'll find online is outdated. Vietnam rewrote its visa rules in late 2023, and a lot has changed since then. This guide covers what actually applies in 2026 — the real entry options, exact costs, how to handle visa runs, and what happens if you overstay.
 
 ## Quick Summary: Which Visa Do You Need?
@@ -244,5 +242,3 @@ At least 7-10 days before you need it. Official processing is 3 working days, bu
 Not necessarily. Vietnam has adjusted this list several times in recent years. Always verify the current list on the official Vietnamese immigration website before relying on visa-free entry.
 
 ---
-
-*We're building out more guides on banking, housing, motorbikes, and daily life in Vietnam — all updated for 2026. Sign up for early access at expatguide.site.*

@@ -57,13 +57,13 @@ The key factor for electric bikes is the rated motor power and design speed — 
 
 ## Insurance: The "Legal Driving" Trap
 
-This is where most expats get a nasty surprise. Quality travel and medical insurance policies — including popular options like [SafetyWing's Nomad Insurance](https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador) and [World Nomads](YOUR_WORLDNOMADS_LINK_HERE) — contain strict clauses about legal driving.
+This is where most expats get a nasty surprise. Quality travel and medical insurance policies — including popular options like [SafetyWing's Nomad Insurance](https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador) and World Nomads — contain strict clauses about legal driving.
 
 **The bottom line:** If you crash while driving without a valid license (a proper 1968 IDP or a Vietnamese license), your insurer can deny your entire medical claim. Hospital bills in Vietnam for foreigners can easily hit $5,000-20,000 USD for serious injuries. This is not a theoretical risk — expat Facebook groups are full of people who learned this the hard way.
 
 **If you can't get a valid license**, there's still a safe option: hire a local driver, sometimes called an "Easy Rider" guide. As a passenger wearing a helmet, you're fully covered by your travel insurance if something goes wrong.
 
-**Regardless of your license situation**, having travel insurance that covers motorbike incidents in Southeast Asia is non-negotiable. [SafetyWing's Nomad Insurance](https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador) is one of the most popular options among expats in Vietnam. It can cover motorbike-related incidents, but coverage depends on your license status, bike displacement, and other policy conditions — check their current terms and pricing before purchasing. [World Nomads](YOUR_WORLDNOMADS_LINK_HERE) is another widely used alternative worth comparing.
+**Regardless of your license situation**, having travel insurance that covers motorbike incidents in Southeast Asia is non-negotiable. [SafetyWing's Nomad Insurance](https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador) is one of the most popular options among expats in Vietnam. It can cover motorbike-related incidents, but coverage depends on your license status, bike displacement, and other policy conditions — check their current terms and pricing before purchasing. World Nomads is another widely used alternative worth comparing.
 
 ## Surviving the Streets: How Traffic Actually Works
 
@@ -117,5 +117,3 @@ If you have no motorbike experience at all, Vietnam's traffic is not the place t
 A full-face helmet or a high-quality 3/4 open-face helmet. The cheap half-shell helmets sold on the sidewalk for 50,000 VND offer zero protection. Invest in a proper helmet from reputable brands available in Vietnam like Andes, Royal (the local helmet brand), or HJC. Expect to pay 500,000-1,500,000 VND for one that could actually save your life.
 
 ---
-
-*We're building out more guides on banking, housing, visa, and daily life in Vietnam — all updated for 2026. Sign up for early access at expatguide.site.*
