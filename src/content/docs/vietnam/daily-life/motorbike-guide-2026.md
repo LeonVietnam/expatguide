@@ -27,9 +27,9 @@ If your IDP is invalid or you're staying long-term, converting your home license
 - **The Process:**
     1. Get a health check at an approved local hospital (takes about 20-30 minutes, costs around 200,000-400,000 VND).
     2. Have your home country license translated and notarized into Vietnamese.
-    3. Submit paperwork, photos, and fingerprints at the local Traffic Police Division (under the Ministry of Public Security).
+    3. Submit paperwork and have your photo taken on-site at the local Traffic Police Division (Phòng Cảnh sát giao thông, or PC08), which now sits under the Ministry of Public Security.
     4. If your home license only covers cars, you skip the written theory test but must pass a practical riding test to get the A1/A2 motorcycle endorsement.
-- **Practical advice:** Navigating the DOT alone with zero Vietnamese is extremely frustrating. Many expats hire a local visa/legal agency to handle the paperwork for 500,000-1,500,000 VND. It saves hours of confusion. Or you can choose the hard mode and do it on your own - follow our [Step-by-Step Vietnam Driver's License Conversion Guide (2026) ](/vietnam/daily-life/vietnam-drivers-license-2026) for the most current office addresses and application forms.
+- **Practical advice:** Navigating the Traffic Police office alone with zero Vietnamese is extremely frustrating. Many expats hire a local visa/legal agency to handle the paperwork. It saves hours of confusion. Or you can choose the hard mode and do it on your own - follow our [Step-by-Step Vietnam Driver's License Conversion Guide (2026)](/vietnam/daily-life/vietnam-drivers-license-2026) for the most current office addresses and application forms.
 
 ### The 50cc & Electric Bike Option
 
@@ -105,7 +105,7 @@ If you get a flat tire on a quiet stretch of road, the nearest mechanic will usu
 No. Under the latest 2026 regulations, standard 30 or 90-day E-visas (DL category) are strictly ineligible for conversion. You must hold a long-term residence document (TRC) or a qualifying long-term visa (such as LD, DT, or TT) with at least three months of validity remaining at the time of application.
 
 **How long is a Vietnamese A1 license valid?**
-While Vietnamese citizens receive permanent A1 licenses, for foreigners, the license validity is now strictly tied to your visa or TRC expiry date. Every time you renew your residency, you must update your physical license to remain legal.
+For foreigners, your converted Vietnamese license validity is tied to the shorter of: your TRC/visa expiry, your foreign license expiry, or the maximum statutory term for that class. In practice, this means most expats receive a license that matches their TRC duration. Every time you renew your residency, you also need to update your physical license to remain legal. See our [driver's license conversion guide](/vietnam/daily-life/vietnam-drivers-license-2026) for the renewal process.
 
 **What happens if I crash and I'm at fault?**
 You are legally responsible for paying the medical bills and vehicle repair costs of the other party. If someone is seriously injured, police will be involved. Leaving the scene of an accident is a criminal offense in Vietnam.
