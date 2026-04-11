@@ -26,6 +26,10 @@ export default defineConfig({
 					autogenerate: { directory: 'vietnam/daily-life' },
 				},
 				{
+					label: 'Healthcare',
+					autogenerate: { directory: 'vietnam/healthcare' },
+				},
+				{
 					label: 'Digital Nomad',
 					autogenerate: { directory: 'vietnam/digital-nomad' },
 				},
