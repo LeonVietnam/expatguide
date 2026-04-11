@@ -13,9 +13,9 @@ Yes. And enforcement has been increasing year over year, especially in tourist h
 
 ### The IDP Trap (1968 vs. 1949)
 
-Vietnam only recognizes International Driving Permits (IDPs) issued under the **1968 Vienna Convention on Road Traffic** (per Circular No. 29/2015/TT-BGTVT).
+Vietnam only recognizes International Driving Permits (IDPs) issued under the 1968 Vienna Convention on Road Traffic. Following the major legal shift on March 1, 2025, driver's license management was transferred from the Ministry of Transport to the Ministry of Public Security (under Circular 12/2025/TT-BCA and Decree 02/2025/ND-CP), significantly tightening roadside enforcement and digital integration.
 
-- **The Catch:** Countries like the USA, Canada, and Australia signed the 1949 Convention, not the 1968 one. If you hold a 1949 IDP, it is technically invalid in Vietnam.
+- **The Catch:** Countries like the USA, Canada, and Australia signed the 1949 Convention, not the 1968 one. If you hold a 1949 IDP, it is technically invalid in Vietnam. Conversion is your only legal path.
 - **The Second Catch:** An IDP is not a standalone license. You must carry your home country license alongside it, and that license *must* have a motorcycle endorsement (Class A/A1). A car-only license plus an IDP does not make you legal on a motorbike.
 - **The Reality Check:** In practice, enforcement varies wildly by province and even by individual officer. Some traffic police don't know the difference between a 1949 and 1968 IDP. Some will wave you through with any English-language document. Others will confiscate your bike on the spot. Do not rely on inconsistent enforcement as your legal strategy.
 
@@ -27,9 +27,9 @@ If your IDP is invalid or you're staying long-term, converting your home license
 - **The Process:**
     1. Get a health check at an approved local hospital (takes about 20-30 minutes, costs around 200,000-400,000 VND).
     2. Have your home country license translated and notarized into Vietnamese.
-    3. Submit paperwork, photos, and fingerprints at the local Department of Transport (Sở Giao thông Vận tải).
+    3. Submit paperwork, photos, and fingerprints at the local Traffic Police Division (under the Ministry of Public Security).
     4. If your home license only covers cars, you skip the written theory test but must pass a practical riding test to get the A1/A2 motorcycle endorsement.
-- **Practical advice:** Navigating the DOT alone with zero Vietnamese is extremely frustrating. Many expats hire a local visa/legal agency to handle the paperwork for 500,000-1,500,000 VND. It saves hours of confusion.
+- **Practical advice:** Navigating the DOT alone with zero Vietnamese is extremely frustrating. Many expats hire a local visa/legal agency to handle the paperwork for 500,000-1,500,000 VND. It saves hours of confusion. Or you can choose the hard mode and do it on your own - follow our [Step-by-Step Vietnam Driver's License Conversion Guide (2026) ](/vietnam/daily-life/vietnam-drivers-license-2026) for the most current office addresses and application forms.
 
 ### The 50cc & Electric Bike Option
 
@@ -101,8 +101,11 @@ If you get a flat tire on a quiet stretch of road, the nearest mechanic will usu
 
 ## Frequently Asked Questions
 
-**Can I get a Vietnamese license on a tourist visa?**
-In most cases, no. The Department of Transport requires a visa or residence permit valid for at least three months. A standard 30 or 90-day tourist visa (including the E-visa) typically doesn't qualify, though rules can vary by province.
+**Can I convert my home license using a tourist visa or E-visa?**
+No. Under the latest 2026 regulations, standard 30 or 90-day E-visas (DL category) are strictly ineligible for conversion. You must hold a long-term residence document (TRC) or a qualifying long-term visa (such as LD, DT, or TT) with at least three months of validity remaining at the time of application.
+
+**How long is a Vietnamese A1 license valid?**
+While Vietnamese citizens receive permanent A1 licenses, for foreigners, the license validity is now strictly tied to your visa or TRC expiry date. Every time you renew your residency, you must update your physical license to remain legal.
 
 **What happens if I crash and I'm at fault?**
 You are legally responsible for paying the medical bills and vehicle repair costs of the other party. If someone is seriously injured, police will be involved. Leaving the scene of an accident is a criminal offense in Vietnam.
