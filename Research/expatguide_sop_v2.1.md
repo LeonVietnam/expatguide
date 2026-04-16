@@ -94,7 +94,7 @@
 
 - 标题必须带年份
 - 内链必须绝对路径
-- 不用第一人称
+- 第一人称规则（见下方详细说明）
 - 不暴露工作流和身份
 - 禁用词必须过滤
 - 房租 / 费用尽量用区间
@@ -103,7 +103,22 @@
 - 数据来源用 italic 小字标注
 - 语气必须是 neutral, practical, reference-style
 
----
+### 第一人称规则详细说明
+
+**禁止（作者第一人称）:**
+- I / my / me / we 用于表达个人经历、个人观点、个人推荐
+- 例如:"I moved to Vietnam in 2019"、"we recommend this restaurant"、"in my experience"
+- 任何会暴露作者身份或让文章读起来像个人博客的表述
+
+**允许（站点编辑语气）:**
+- "our" + 站内文章引用,例如:"see our [Banking Guide](/...)"、"our [motorbike guide](/...) covers..."
+- 这属于站点编辑语气,不是个人博客语气,且有助于阅读流畅性
+
+**允许（读者视角 FAQ 标题）:**
+- FAQ 小标题使用读者第一人称,例如:"Can I convert my license?"、"What if my landlord refuses?"
+- 这是搜索意图匹配,不是作者第一人称
+
+判定原则:问"这句话读起来是某个人在说话,还是一个参考站点在引导读者?" 如果是后者,允许。
 
 ## 普通链路总览
 
@@ -361,7 +376,7 @@ Self-Audit 不能只写 pass/fail，必须带证据。
 
 ```text
 HARD RULES
-- no first person
+- no first person (exception: "our" + internal link references, and reader-perspective FAQ headings, are allowed)
 - year in title
 - absolute internal links only
 - banned words list applies
@@ -391,7 +406,7 @@ VALIDATION PACK:
 Writing rules:
 - Title must include year
 - Use absolute internal links only
-- No first person
+- No first person (exception: "our" + internal link references, and reader-perspective FAQ headings like "Can I..." are allowed)
 - No self-referential writing
 - No identity reveal
 - Tone must be neutral, practical, and reference-style
@@ -502,7 +517,7 @@ Markdown requirements:
 - Keep formatting clean and publication-ready
 
 FINAL HARD RULES CHECK BEFORE WRITING
-- no first person
+- no first person (exception: "our" + internal link references, and reader-perspective FAQ headings, are allowed)
 - year in title
 - absolute internal links only
 - banned words list still applies
@@ -577,7 +592,7 @@ DRAFT PACKAGE
 
 ```text
 HARD RULES
-- no first person
+- no first person (exception: "our" + internal link references, and reader-perspective FAQ headings, are allowed)
 - year in title
 - absolute internal links only
 - banned words list applies
@@ -655,7 +670,7 @@ CLAUDE QA ISSUE LIST
 
 ```text
 HARD RULES
-- no first person
+- no first person (exception: "our" + internal link references, and reader-perspective FAQ headings, are allowed)
 - year in title
 - absolute internal links only
 - banned words list applies
@@ -726,7 +741,7 @@ At the end, include:
 
 ```text
 HARD RULES
-- no first person
+- no first person (exception: "our" + internal link references, and reader-perspective FAQ headings, are allowed)
 - year in title
 - absolute internal links only
 - banned words list applies
@@ -819,7 +834,7 @@ Do not write the final article.
 
 ```text
 HARD RULES
-- no first person
+- no first person (exception: "our" + internal link references, and reader-perspective FAQ headings, are allowed)
 - year in title
 - absolute internal links only
 - banned words list applies
@@ -920,7 +935,7 @@ Do not write the full article.
 
 ```text
 HARD RULES
-- no first person
+- no first person (exception: "our" + internal link references, and reader-perspective FAQ headings, are allowed)
 - year in title
 - absolute internal links only
 - banned words list applies
@@ -950,7 +965,7 @@ VALIDATION PACK:
 Writing rules:
 - Title must include year
 - Use absolute internal links only
-- No first person
+- No first person (exception: "our" + internal link references, and reader-perspective FAQ headings like "Can I..." are allowed)
 - No self-referential writing
 - No identity reveal
 - Tone must be neutral, practical, and reference-style
@@ -1056,7 +1071,7 @@ Markdown requirements:
 - Keep formatting clean and publication-ready
 
 FINAL HARD RULES CHECK BEFORE WRITING
-- no first person
+- no first person (exception: "our" + internal link references, and reader-perspective FAQ headings, are allowed)
 - year in title
 - absolute internal links only
 - banned words list still applies
@@ -1131,7 +1146,7 @@ DRAFT PACKAGE
 
 ```text
 HARD RULES
-- no first person
+- no first person (exception: "our" + internal link references, and reader-perspective FAQ headings, are allowed)
 - year in title
 - absolute internal links only
 - banned words list applies
@@ -1160,7 +1175,7 @@ Rules:
 - Keep the article in markdown
 - Keep the title with year
 - Keep tone neutral and reference-style
-- No first person
+- No first person (exception: "our" + internal link references, and reader-perspective FAQ headings like "Can I..." are allowed)
 - No banned words
 - Absolute internal links only
 - Keep the article natural, useful, and publication-ready
@@ -1195,7 +1210,7 @@ Final quality bar:
 - It should preserve the ExpatGuide reference-site tone
 
 FINAL HARD RULES CHECK BEFORE RETURNING
-- no first person
+- no first person (exception: "our" + internal link references, and reader-perspective FAQ headings, are allowed)
 - year in title
 - absolute internal links only
 - banned words list still applies
