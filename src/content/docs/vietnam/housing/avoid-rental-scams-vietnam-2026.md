@@ -14,7 +14,7 @@ This guide covers what you actually need to know before signing anything.
 
 Yes, with no formal restrictions on visa type. Any foreigner who has entered Vietnam legally can sign a rental contract. There is no minimum visa duration required by law to rent.
 
-In practice, the situation is more nuanced. Most landlords want your visa to cover a meaningful portion of the lease — typically at least one to three months of remaining validity, and preferably the full lease term. Managed buildings and formal agents will often require a work permit or TRC before issuing a 12-month contract. If you arrive on a 30-day e-Visa, expect resistance on anything beyond a month-to-month arrangement. For longer leases, a business visa, work permit, or TRC gives you significantly more leverage in negotiations.
+In practice, the situation is more complicated. Most landlords want your visa to cover a meaningful portion of the lease — typically at least one to three months of remaining validity, and preferably the full lease term. Managed buildings and formal agents will often require a work permit or TRC before issuing a 12-month contract. If you arrive on a 30-day e-Visa, expect resistance on anything beyond a month-to-month arrangement. For longer leases, a business visa, work permit, or TRC gives you significantly more bargaining power in negotiations.
 
 ---
 

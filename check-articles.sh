@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ExpatGuide Article Quality Check Script v1.1
+# ExpatGuide Article Quality Check Script v1.2
 # 用法: 在项目根目录运行 bash check-articles.sh
 # 可选: bash check-articles.sh path/to/specific-file.md (只检查单篇)
 # 可选: bash check-articles.sh --who-links /vietnam/xxx/slug-name (查引用)
@@ -10,12 +10,11 @@ CURRENT_YEAR="2026"
 ERRORS=0
 WARNINGS=0
 
-# 颜色
 RED='\033[0;31m'
 YELLOW='\033[1;33m'
 GREEN='\033[0;32m'
 CYAN='\033[0;36m'
-NC='\033[0m' # No Color
+NC='\033[0m'
 
 divider() {
   echo ""
@@ -192,14 +191,17 @@ divider "4. Affiliate 检测 (SafetyWing / Wise / World Nomads)"
 
 AFF_BEFORE=$ERRORS
 for file in $FILES; do
-  sw_count=$(grep -oi "safetywing" "$file" | wc -l | tr -d ' ')
+  # SafetyWing: 先去掉 URL 里的 safetywing.com,只计数显示文字中的出现
+  # 方法: 去掉 (https://safetywing.com...) 格式的 URL 后再计数
+  sw_count=$(sed 's/(https:\/\/safetywing\.com[^)]*)//g' "$file" | grep -oi "safetywing" | wc -l | tr -d ' ')
   
-  # Wise: 排除 otherwise, likewise, wisdom 等非品牌词
+  # Wise: 排除 otherwise, likewise, wisdom
   wise_all=$(grep -oiE '\bwise\b' "$file" | wc -l | tr -d ' ')
   wise_false=$(grep -oiE '\b(otherwise|likewise|wisdom)\b' "$file" | wc -l | tr -d ' ')
   wise_brand=$((wise_all - wise_false))
   if [ $wise_brand -lt 0 ]; then wise_brand=0; fi
   
+  # World Nomads
   wn_count=$(grep -oi "world nomads" "$file" | wc -l | tr -d ' ')
   
   # SafetyWing 超标
@@ -207,13 +209,14 @@ for file in $FILES; do
     error "$file → SafetyWing 出现 $sw_count 次 (上限1次)"
   fi
   
-  # Wise: banking guide 是专题文章,Wise 作为正文主题不算超标
-  is_banking=false
-  if [[ "$file" == *"bank-account"* ]] || [[ "$file" == *"banking"* ]]; then
-    is_banking=true
+  # Wise: visa/trc/cost-of-living 等文章中 Wise 作为正文主题讨论也豁免
+  # 只有非金融/非签证类文章里超过 1 次才报
+  is_wise_topic=false
+  if [[ "$file" == *"bank"* ]] || [[ "$file" == *"visa"* ]] || [[ "$file" == *"trc"* ]] || [[ "$file" == *"cost-of-living"* ]]; then
+    is_wise_topic=true
   fi
   
-  if [ "$is_banking" = false ] && [ "$wise_brand" -gt 1 ]; then
+  if [ "$is_wise_topic" = false ] && [ "$wise_brand" -gt 1 ]; then
     warn "$file → Wise 品牌提及 $wise_brand 次 (上限1次,请人工确认)"
   fi
   
@@ -224,7 +227,8 @@ for file in $FILES; do
   
   # World Nomads + SafetyWing 同句
   if [ "$wn_count" -gt 0 ] && [ "$sw_count" -gt 0 ]; then
-    same_line=$(grep -i "safetywing" "$file" | grep -i "world nomads")
+    # 去掉 URL 后检查同行
+    same_line=$(sed 's/(https:\/\/safetywing\.com[^)]*)//g' "$file" | grep -i "safetywing" | grep -i "world nomads")
     if [ -n "$same_line" ]; then
       error "$file → World Nomads 和 SafetyWing 出现在同一句"
     fi
@@ -240,11 +244,6 @@ fi
 # ============================================================
 divider "5. 第一人称检测 (First Person)"
 
-# 例外规则:
-# 1. "our" + 紧跟内链引用 (our [xxx](...)) → 站点编辑语气,允许
-# 2. FAQ 标题 (## / ### / ** 开头的问句) 中的 I/my → 读者视角,允许
-# 3. 地名中的 My (My An, My Khe, Phu My Hung, Hoan My) → 不是第一人称
-
 FP_BEFORE=$ERRORS
 for file in $FILES; do
   
@@ -253,14 +252,13 @@ for file in $FILES; do
     line_num=$(echo "$match" | cut -d: -f1)
     line_content=$(echo "$match" | cut -d: -f2-)
     
-    # 跳过 frontmatter 区域
+    # 跳过 frontmatter
     if echo "$line_content" | grep -qE "^(---|title:|description:|sidebar|template)"; then
       continue
     fi
     
-    # 例外1: our + 内链 (our [xxx](/...))
+    # 例外1: our + 内链
     if echo "$line_content" | grep -qiE '\bour\s+\[' && echo "$line_content" | grep -qE '\]\(/'; then
-      # 检查这行除了 "our [link]" 之外是否还有其他 my/we/our
       cleaned=$(echo "$line_content" | sed -E 's/our \[[^]]*\]\([^)]*\)//gi')
       if ! echo "$cleaned" | grep -qiE '\b(my|we|our)\b'; then
         continue
@@ -280,6 +278,19 @@ for file in $FILES; do
       fi
     fi
     
+    # 例外4: 引号内的第三方语气 ("we speak English", "sorry we only rent...", "my treatment plan")
+    # 检查 my/we/our 是否在引号内
+    has_outside_quotes=false
+    # 去掉所有引号内内容后,检查是否还有 my/we/our
+    stripped=$(echo "$line_content" | sed -E 's/"[^"]*"//g')
+    if echo "$stripped" | grep -qiE '\b(my|we|our)\b'; then
+      has_outside_quotes=true
+    fi
+    
+    if [ "$has_outside_quotes" = false ]; then
+      continue
+    fi
+    
     error "$file:$line_num → 第一人称: $(echo "$line_content" | cut -c1-150)"
   done
   
@@ -293,7 +304,7 @@ for file in $FILES; do
       continue
     fi
     
-    # 排除常见缩写: AI, UI, ID, FDI, JCI, VNeID, I-xx
+    # 排除缩写
     cleaned=$(echo "$line_content" | sed -E 's/\b(AI|UI|ID|FDI|JCI|VNeID|I-[0-9]+)\b//g')
     if ! echo "$cleaned" | grep -qE '\bI\b'; then
       continue
@@ -304,12 +315,11 @@ for file in $FILES; do
       continue
     fi
     
-    # 例外: 引号内的 I (如 "I had an IDP")
-    if echo "$line_content" | grep -qE '"[^"]*\bI\b[^"]*"'; then
-      cleaned2=$(echo "$line_content" | sed -E 's/"[^"]*"//g')
-      if ! echo "$cleaned2" | grep -qE '\bI\b'; then
-        continue
-      fi
+    # 例外: 引号内的 I
+    stripped=$(echo "$line_content" | sed -E 's/"[^"]*"//g')
+    cleaned2=$(echo "$stripped" | sed -E 's/\b(AI|UI|ID|FDI|JCI|VNeID|I-[0-9]+)\b//g')
+    if ! echo "$cleaned2" | grep -qE '\bI\b'; then
+      continue
     fi
     
     warn "$file:$line_num → 可能的第一人称 I (请人工确认)"

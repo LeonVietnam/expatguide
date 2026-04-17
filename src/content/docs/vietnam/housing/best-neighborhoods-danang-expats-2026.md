@@ -264,7 +264,7 @@ This is the question that actually determines your neighborhood. If you refuse t
 
 On July 1, 2025, Da Nang executed a historic merger, absorbing Quang Nam province. The city ballooned to roughly 11,860 square kilometers with a population of roughly 2.8 million — and inherited two UNESCO World Heritage sites (Hoi An Ancient Town and My Son Sanctuary) in the process.
 
-Crucially, the government abolished the "District" (*quận*) tier in the urban core. For Grab drivers, Google Maps, and daily expat conversations, the old names (Hai Chau, An Thuong, Hoi An) are still universally used. However, when you open a local bank account (see our [Vietnam bank account guide](/vietnam/banking/bank-account-guide-2026)) or register your address for a visa extension (covered in our [Vietnam visa guide](/vietnam/visa/visa-guide-2026)), your lease agreement **must** reflect the new official wards (*phường*).
+In practice, the government abolished the "District" (*quận*) tier in the urban core. For Grab drivers, Google Maps, and daily expat conversations, the old names (Hai Chau, An Thuong, Hoi An) are still universally used. However, when you open a local bank account (see our [Vietnam bank account guide](/vietnam/banking/bank-account-guide-2026)) or register your address for a visa extension (covered in our [Vietnam visa guide](/vietnam/visa/visa-guide-2026)), your lease agreement **must** reflect the new official wards (*phường*).
 
 **The 2026 ward mapping cheat sheet:**
 

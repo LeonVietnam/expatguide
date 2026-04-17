@@ -26,7 +26,7 @@ This catches people every single week. Vietnam enforces a strict rule: **your pa
 
 Even if you have an approved E-visa in hand, airlines will deny you boarding if your passport has 5 months and 29 days of validity left. Check your expiration date before you book your flight.
 
-## The 2026 Visa Landscape: What Are Your Options?
+## The 2026 Visa System: What Are Your Options?
 
 Vietnam overhauled its visa system in late 2023 under **Resolutions No. 127 and 128/NQ-CP**, and those rules remain the standard today.
 
@@ -141,7 +141,7 @@ In-country extensions for tourist visas have become extremely unreliable and exp
 4. Enter the neighboring country (you'll need a Cambodia Visa on Arrival at $30 USD, or a Laos visa, or your existing visa for the destination country).
 5. Turn around and re-enter Vietnam on your new E-visa.
 
-If you're doing frequent visa runs, make sure your travel medical insurance like [SafetyWing](https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador) covers you while in transit across borders — some policies have gaps during overland crossings.
+If you're doing frequent visa runs, make sure your travel medical insurance covers you while in transit across borders — some policies have gaps during overland crossings.
 
 ### Expected Costs (Moc Bai / Cambodia Route — from HCMC)
 
@@ -178,7 +178,7 @@ For overstays under 15 days, you can usually pay the fine directly to immigratio
 
 **Severe overstays (90+ days)** carry consequences beyond fines: forced deportation, a ban on re-entering Vietnam, and a permanent mark on your immigration record that other countries can see.
 
-**Scam warning:** If someone offers to "clear" a short overstay for $300 USD, ignore them. Go to the airport early, pay the official fine at the immigration counter, and leave. It's straightforward.
+**Scam warning:** If someone offers to "clear" a short overstay for $300 USD, ignore them. Go to the airport early, pay the official fine at the immigration counter, and leave. It's simple.
 
 ## How to Find a Reliable Visa Agent
 

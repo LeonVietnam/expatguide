@@ -46,7 +46,7 @@ The key factor for electric bikes is the rated motor power and design speed — 
 ### Renting a Bike
 
 - **Expected Cost:** 100,000 to 300,000 VND per day ($4-12 USD), depending on the bike type — a Honda Blade will be cheaper than a Honda Airblade or Honda Vision. Monthly rentals drop to 1.5-3 million VND.
-- **The Golden Rule:** Never hand over your original passport as collateral. Leave a photocopy and a cash deposit (usually 1-3 million VND). If a shop insists on holding your physical passport, walk away. With your passport locked in their drawer, you have zero leverage in any dispute.
+- **The Golden Rule:** Never hand over your original passport as collateral. Leave a photocopy and a cash deposit (usually 1-3 million VND). If a shop insists on holding your physical passport, walk away. With your passport locked in their drawer, you have zero bargaining power in any dispute.
 - **The Paperwork:** Make sure the shop gives you a notarized copy (Bản sao công chứng) of the vehicle's Blue Card (Giấy Đăng Ký Xe). Traffic police can confiscate any bike that doesn't have registration proof — they'll assume it's stolen.
 
 ### Buying a Bike
@@ -63,7 +63,7 @@ This is where most expats get a nasty surprise. Quality travel and medical insur
 
 **If you can't get a valid license**, there's still a safe option: hire a local driver, sometimes called an "Easy Rider" guide. As a passenger wearing a helmet, you're fully covered by your travel insurance if something goes wrong.
 
-**Regardless of your license situation**, having travel insurance that covers motorbike incidents in Southeast Asia is non-negotiable. [SafetyWing's Nomad Insurance](https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador) is one of the most popular options among expats in Vietnam. It can cover motorbike-related incidents, but coverage depends on your license status, bike displacement, and other policy conditions — check their current terms and pricing before purchasing. World Nomads is another widely used alternative worth comparing.
+**Regardless of your license situation**, having travel insurance that covers motorbike incidents in Southeast Asia is non-negotiable. Coverage depends on your license status, bike displacement, and other policy conditions — check the current terms of your plan before purchasing.
 
 ## Surviving the Streets: How Traffic Actually Works
 

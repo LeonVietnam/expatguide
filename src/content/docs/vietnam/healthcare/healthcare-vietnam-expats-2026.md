@@ -6,7 +6,7 @@ lastUpdated: 2026-04-11
 
 This is a navigation guide to Vietnam's medical system for foreigners. It covers how the three-tier hospital structure actually works, which hospitals expats use in each major city, what care typically costs, what your insurance options look like in practice, and what to do in an emergency. It does not cover specific medical conditions, pregnancy and childbirth, or detailed insurance product comparisons — those will be addressed in separate articles in this section.
 
-A lot has changed in 2025. Vietnam's social insurance law was rewritten and new rules for foreign workers took effect on 1 July 2025. The first major international-standard private hospital began accepting Vietnamese social health insurance for outpatient and emergency care. The administrative reorganisation that abolished the District level on 1 July 2025 also changed how some hospital addresses are written. This article reflects the post-reform landscape as of April 2026.
+A lot has changed in 2025. Vietnam's social insurance law was rewritten and new rules for foreign workers took effect on 1 July 2025. The first major international-standard private hospital began accepting Vietnamese social health insurance for outpatient and emergency care. The administrative reorganisation that abolished the District level on 1 July 2025 also changed how some hospital addresses are written. This article reflects the post-reform situation as of April 2026.
 
 If you remember one thing: Vietnam's medical care is genuinely good and genuinely affordable by international standards, but the system has its own logic that does not match what most foreigners are used to. The cost of not understanding it is usually money and time, occasionally a bad outcome.
 
@@ -66,7 +66,7 @@ If you live outside Hanoi, HCMC, or Da Nang, the realistic plan for any non-triv
 
 ## Cost Reality
 
-Costs in Vietnam are difficult to give as single numbers because they vary enormously by tier, by city, by whether you have insurance, and by whether you are quoted the local price or the international-patient price. The ranges below are broad and illustrative — always ask for a written estimate before any non-emergency procedure. For broader context on what other categories of monthly spending look like, see [Cost of Living in Vietnam](/vietnam/daily-life/cost-of-living-vietnam-2026).
+Costs in Vietnam are difficult to give as single numbers because they vary enormously by tier, by city, by whether you have insurance, and by whether you get quoted the local price or the international-patient price. The ranges below are broad and illustrative — always ask for a written estimate before any non-emergency procedure. For broader context on what other categories of monthly spending look like, see [Cost of Living in Vietnam](/vietnam/daily-life/cost-of-living-vietnam-2026).
 
 **General consultation with a doctor:** Roughly 200,000–400,000 VND ($8–$16) at a public hospital, 400,000–1,200,000 VND ($16–$48) at a private hospital, and 1,500,000–2,400,000 VND ($60–$95) at an international hospital or international clinic. The international tier is roughly 50–70% lower than equivalent costs in the US or Europe.
 

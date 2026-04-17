@@ -14,7 +14,7 @@ Most people who land on this page have already done the math on back-to-back 90-
 
 This Vietnam TRC guide is written for people who have already decided they want one and need the operational details: which category applies to you, exactly which documents you need, how much the government charges under the new Circular 28/2026 that took effect on April 1, 2026, and the specific ways applications get rejected. It assumes you are already in Vietnam on a valid visa and are trying to figure out what comes next.
 
-One scope note before we dive in: this is a guide to the TRC, not a general Vietnam visa guide. If you are still at the "which visa should I enter on" stage, start with our [Vietnam visa guide 2026](/vietnam/visa/visa-guide-2026) first, then come back here when you're ready to upgrade to residency.
+One scope note before getting started: this is a guide to the TRC, not a general Vietnam visa guide. If you are still at the "which visa should I enter on" stage, start with our [Vietnam visa guide 2026](/vietnam/visa/visa-guide-2026) first, then come back here when you're ready to upgrade to residency.
 
 ## Key Takeaways
 
@@ -33,7 +33,7 @@ On the ground, holding a TRC means:
 - **No more visa runs.** You don't need to leave Vietnam and re-enter to maintain your legal status for the entire validity of the card (1 to 10 years depending on category).
 - **Multiple entries and exits without new visas.** The card itself is your re-entry document.
 - **Full-function Vietnamese bank accounts.** Banks like Vietcombank, Techcombank, and BIDV will open ordinary resident accounts for TRC holders. E-visa holders and tourists are typically restricted to limited accounts.
-- **Long-term lease contracts in your own name**, without the landlord having to navigate monthly foreigner registration renewals.
+- **Long-term lease contracts in your own name**, without the landlord having to deal with monthly foreigner registration renewals.
 - **Vehicle registration.** You can legally buy and register a motorbike or car in your own name.
 - **Dependent derivative applications.** Your spouse and children under 18 can apply for TT-category TRCs derived from yours.
 
@@ -153,7 +153,7 @@ One of the most common reasons DT TRCs get rejected or downgraded is incomplete 
 
 ## TT Category: The Spouse and Dependent TRC
 
-If you're married to a Vietnamese citizen, or to a foreigner who already holds an LD, DT, LS, or DH TRC in Vietnam, the TT category is the most straightforward path.
+If you're married to a Vietnamese citizen, or to a foreigner who already holds an LD, DT, LS, or DH TRC in Vietnam, the TT category is the most direct path.
 
 ### Who Qualifies
 
@@ -309,7 +309,7 @@ If you're actively weighing whether Vietnam is the right base for a multi-year n
 Once you have a TRC in hand, a few things in your daily life change meaningfully:
 
 - **You can [open a full-function Vietnamese bank account](/vietnam/banking/bank-account-guide-2026).** Vietcombank, Techcombank, and BIDV all accept TRC holders as ordinary residents, which unlocks linked debit cards, ZaloPay and MoMo integration, and the ability to receive salary payments locally.
-- **Long-term leases become straightforward.** No more landlord anxiety about foreigner registration, no more "sorry we only rent to foreigners on a 1-month basis." You can sign standard 12- to 24-month leases and use the stability to actually set up a home.
+- **Long-term leases become simple.** No more landlord anxiety about foreigner registration, no more "sorry we only rent to foreigners on a 1-month basis." You can sign standard 12- to 24-month leases and use the stability to actually set up a home.
 - **You can register a motorbike in your own name.** Buying a scooter without a TRC means using a Vietnamese friend as the registered owner, which is fine until it isn't. With a TRC you can do it properly. (If you haven't yet, see our [motorbike guide](/vietnam/daily-life/motorbike-guide-2026) for the full registration process.)
 - **Health insurance becomes simpler.** With a TRC you can buy Vietnamese private health plans, or keep using a nomad-focused travel plan like [SafetyWing Nomad Insurance](https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador), which at $56.28 per 4 weeks for travelers aged 10–39 is often still cheaper than Vietnamese private insurance for the first few years and covers you during international trips too.
 - **Your spouse and children under 18 can derive TT TRCs** from your primary TRC, giving the whole family legal long-term residence without separate sponsorship.
@@ -318,7 +318,7 @@ TRC holders are also legally eligible to apply for Permanent Residence Cards (PR
 
 ## Working With an Immigration Consultant
 
-If you want professional help rather than running the process yourself (common for first-time applicants, especially DT applications with complex capital structures), expect to pay $300 to $800 in service fees on top of the government fee for a straightforward LD or TT application, and considerably more for DT applications involving capital verification.
+If you want professional help rather than running the process yourself (common for first-time applicants, especially DT applications with complex capital structures), expect to pay $300 to $800 in service fees on top of the government fee for a standard LD or TT application, and considerably more for DT applications involving capital verification.
 
 When choosing a firm, look for:
 
