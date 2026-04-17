@@ -1,9 +1,13 @@
 #!/bin/bash
 
-# ExpatGuide Article Quality Check Script v1.2
+# ExpatGuide Article Quality Check Script v1.3
 # 用法: 在项目根目录运行 bash check-articles.sh
 # 可选: bash check-articles.sh path/to/specific-file.md (只检查单篇)
 # 可选: bash check-articles.sh --who-links /vietnam/xxx/slug-name (查引用)
+#
+# v1.3 更新: 禁用词分两类
+#   - 硬禁用词: ERROR
+#   - 语境敏感词: WARN (人工判断使用是否合理)
 
 DOCS_DIR="src/content/docs"
 CURRENT_YEAR="2026"
@@ -95,11 +99,12 @@ if [ $ERRORS -eq $LINK_BEFORE ]; then
 fi
 
 # ============================================================
-# 2. 禁用词检测
+# 2. 禁用词检测 (硬禁用 + 语境敏感)
 # ============================================================
 divider "2. 禁用词检测 (Banned Words)"
 
-BANNED_WORDS=(
+# 硬禁用词 (任何语境都报 ERROR)
+HARD_BANNED=(
   "vibrant"
   "bustling"
   "hidden gem"
@@ -115,24 +120,17 @@ BANNED_WORDS=(
   "tropical haven"
   "delve"
   "tapestry"
-  "navigate"
-  "leverage"
-  "robust"
   "ever-evolving"
-  "landscape"
   "seamless"
   "holistic"
   "intricate"
-  "nuanced"
   "multifaceted"
   "underscore"
   "pivotal"
-  "crucial"
   "foster"
   "empower"
   "streamline"
   "tailored"
-  "comprehensive"
   "in today's world"
   "in today's fast-paced environment"
   "whether you are"
@@ -141,21 +139,51 @@ BANNED_WORDS=(
   "serves as a cornerstone"
 )
 
+# 语境敏感词 (报 WARN, 提示人工判断)
+CONTEXT_SENSITIVE=(
+  "leverage"
+  "navigate"
+  "landscape"
+  "comprehensive"
+  "robust"
+  "nuanced"
+  "crucial"
+)
+
 BANNED_BEFORE=$ERRORS
+WARN_BEFORE=$WARNINGS
+
+# 硬禁用词扫描
 for file in $FILES; do
-  for word in "${BANNED_WORDS[@]}"; do
+  for word in "${HARD_BANNED[@]}"; do
     matches=$(grep -ni "$word" "$file" 2>/dev/null)
     if [ -n "$matches" ]; then
       while IFS= read -r match; do
         line_num=$(echo "$match" | cut -d: -f1)
-        error "$file:$line_num → 禁用词: \"$word\""
+        error "$file:$line_num → 硬禁用词: \"$word\""
       done <<< "$matches"
     fi
   done
 done
 
-if [ $ERRORS -eq $BANNED_BEFORE ]; then
+# 语境敏感词扫描
+for file in $FILES; do
+  for word in "${CONTEXT_SENSITIVE[@]}"; do
+    matches=$(grep -ni "$word" "$file" 2>/dev/null)
+    if [ -n "$matches" ]; then
+      while IFS= read -r match; do
+        line_num=$(echo "$match" | cut -d: -f1)
+        line_text=$(echo "$match" | cut -d: -f2- | cut -c1-100)
+        warn "$file:$line_num → 语境敏感词 \"$word\" — 人工判断: $line_text"
+      done <<< "$matches"
+    fi
+  done
+done
+
+if [ $ERRORS -eq $BANNED_BEFORE ] && [ $WARNINGS -eq $WARN_BEFORE ]; then
   ok "没有发现禁用词"
+elif [ $ERRORS -eq $BANNED_BEFORE ]; then
+  ok "没有硬禁用词 (语境敏感词请人工判断)"
 fi
 
 # ============================================================
@@ -191,26 +219,19 @@ divider "4. Affiliate 检测 (SafetyWing / Wise / World Nomads)"
 
 AFF_BEFORE=$ERRORS
 for file in $FILES; do
-  # SafetyWing: 先去掉 URL 里的 safetywing.com,只计数显示文字中的出现
-  # 方法: 去掉 (https://safetywing.com...) 格式的 URL 后再计数
   sw_count=$(sed 's/(https:\/\/safetywing\.com[^)]*)//g' "$file" | grep -oi "safetywing" | wc -l | tr -d ' ')
   
-  # Wise: 排除 otherwise, likewise, wisdom
   wise_all=$(grep -oiE '\bwise\b' "$file" | wc -l | tr -d ' ')
   wise_false=$(grep -oiE '\b(otherwise|likewise|wisdom)\b' "$file" | wc -l | tr -d ' ')
   wise_brand=$((wise_all - wise_false))
   if [ $wise_brand -lt 0 ]; then wise_brand=0; fi
   
-  # World Nomads
   wn_count=$(grep -oi "world nomads" "$file" | wc -l | tr -d ' ')
   
-  # SafetyWing 超标
   if [ "$sw_count" -gt 1 ]; then
     error "$file → SafetyWing 出现 $sw_count 次 (上限1次)"
   fi
   
-  # Wise: visa/trc/cost-of-living 等文章中 Wise 作为正文主题讨论也豁免
-  # 只有非金融/非签证类文章里超过 1 次才报
   is_wise_topic=false
   if [[ "$file" == *"bank"* ]] || [[ "$file" == *"visa"* ]] || [[ "$file" == *"trc"* ]] || [[ "$file" == *"cost-of-living"* ]]; then
     is_wise_topic=true
@@ -220,14 +241,11 @@ for file in $FILES; do
     warn "$file → Wise 品牌提及 $wise_brand 次 (上限1次,请人工确认)"
   fi
   
-  # World Nomads 超标
   if [ "$wn_count" -gt 1 ]; then
     error "$file → World Nomads 出现 $wn_count 次 (上限1次)"
   fi
   
-  # World Nomads + SafetyWing 同句
   if [ "$wn_count" -gt 0 ] && [ "$sw_count" -gt 0 ]; then
-    # 去掉 URL 后检查同行
     same_line=$(sed 's/(https:\/\/safetywing\.com[^)]*)//g' "$file" | grep -i "safetywing" | grep -i "world nomads")
     if [ -n "$same_line" ]; then
       error "$file → World Nomads 和 SafetyWing 出现在同一句"
@@ -240,24 +258,21 @@ if [ $ERRORS -eq $AFF_BEFORE ]; then
 fi
 
 # ============================================================
-# 5. 第一人称检测 (带例外)
+# 5. 第一人称检测
 # ============================================================
 divider "5. 第一人称检测 (First Person)"
 
 FP_BEFORE=$ERRORS
 for file in $FILES; do
   
-  # --- 检测 my / we / our ---
   grep -nE '\b(my|we|our)\b' "$file" | while IFS= read -r match; do
     line_num=$(echo "$match" | cut -d: -f1)
     line_content=$(echo "$match" | cut -d: -f2-)
     
-    # 跳过 frontmatter
     if echo "$line_content" | grep -qE "^(---|title:|description:|sidebar|template)"; then
       continue
     fi
     
-    # 例外1: our + 内链
     if echo "$line_content" | grep -qiE '\bour\s+\[' && echo "$line_content" | grep -qE '\]\(/'; then
       cleaned=$(echo "$line_content" | sed -E 's/our \[[^]]*\]\([^)]*\)//gi')
       if ! echo "$cleaned" | grep -qiE '\b(my|we|our)\b'; then
@@ -265,12 +280,10 @@ for file in $FILES; do
       fi
     fi
     
-    # 例外2: FAQ 标题问句
     if echo "$line_content" | grep -qE '^\s*(##|###|\*\*)' && echo "$line_content" | grep -qE '\?'; then
       continue
     fi
     
-    # 例外3: 地名 My
     if echo "$line_content" | grep -qiE 'My An|My Khe|Phu My|Hoan My'; then
       cleaned=$(echo "$line_content" | sed -E 's/(My An|My Khe|Phu My Hung|Phu My|Hoan My)//gi')
       if ! echo "$cleaned" | grep -qiE '\b(my)\b'; then
@@ -278,10 +291,7 @@ for file in $FILES; do
       fi
     fi
     
-    # 例外4: 引号内的第三方语气 ("we speak English", "sorry we only rent...", "my treatment plan")
-    # 检查 my/we/our 是否在引号内
     has_outside_quotes=false
-    # 去掉所有引号内内容后,检查是否还有 my/we/our
     stripped=$(echo "$line_content" | sed -E 's/"[^"]*"//g')
     if echo "$stripped" | grep -qiE '\b(my|we|our)\b'; then
       has_outside_quotes=true
@@ -294,28 +304,23 @@ for file in $FILES; do
     error "$file:$line_num → 第一人称: $(echo "$line_content" | cut -c1-150)"
   done
   
-  # --- 检测独立大写 I ---
   grep -nE '\bI\b' "$file" | while IFS= read -r match; do
     line_num=$(echo "$match" | cut -d: -f1)
     line_content=$(echo "$match" | cut -d: -f2-)
     
-    # 跳过 frontmatter
     if echo "$line_content" | grep -qE "^(---|title:|description:|sidebar|template)"; then
       continue
     fi
     
-    # 排除缩写
     cleaned=$(echo "$line_content" | sed -E 's/\b(AI|UI|ID|FDI|JCI|VNeID|I-[0-9]+)\b//g')
     if ! echo "$cleaned" | grep -qE '\bI\b'; then
       continue
     fi
     
-    # 例外: FAQ 标题问句
     if echo "$line_content" | grep -qE '^\s*(##|###|\*\*)' && echo "$line_content" | grep -qE '\?'; then
       continue
     fi
     
-    # 例外: 引号内的 I
     stripped=$(echo "$line_content" | sed -E 's/"[^"]*"//g')
     cleaned2=$(echo "$stripped" | sed -E 's/\b(AI|UI|ID|FDI|JCI|VNeID|I-[0-9]+)\b//g')
     if ! echo "$cleaned2" | grep -qE '\bI\b'; then
@@ -382,6 +387,10 @@ divider "检查总结"
 echo ""
 echo -e "  ${RED}Errors:   $ERRORS${NC}"
 echo -e "  ${YELLOW}Warnings: $WARNINGS${NC}"
+echo ""
+echo "  说明:"
+echo "  - ERROR  = 必须修复 (硬禁用词、断链、affiliate 超标、第一人称等)"
+echo "  - WARN   = 人工判断 (语境敏感词、孤立页面、可能的第一人称等)"
 echo ""
 
 if [ $ERRORS -eq 0 ] && [ $WARNINGS -eq 0 ]; then
