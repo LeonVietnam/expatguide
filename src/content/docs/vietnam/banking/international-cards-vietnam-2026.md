@@ -42,6 +42,7 @@ Cross-border QR also needs to be handled carefully. Vietnam does have scheme-spe
 For most newcomers, the most reliable payment mix looks like this:
 
 - one foreign Visa or Mastercard for organized merchants and online checkout
+  - A [Wise multi-currency card](https://wise.com/invite/dic/ganqiuh) can fit this role well for readers who already use Wise, especially if they keep money in multiple currencies, want one card for spending and occasional Vietnam ATM withdrawals, and want to avoid DCC by choosing VND at the terminal. When conversion is needed, Wise uses a published mid-market-rate pricing model rather than merchant-side conversion.
 - some VND cash for small purchases, temporary gaps, and card failures
 - a plan for local transfer later if the stay includes rent, utilities, or repeated QR-first payments
 
