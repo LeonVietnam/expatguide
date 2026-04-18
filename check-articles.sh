@@ -1,13 +1,15 @@
 #!/bin/bash
 
-# ExpatGuide Article Quality Check Script v1.3
+# ExpatGuide Article Quality Check Script v1.4
 # 用法: 在项目根目录运行 bash check-articles.sh
 # 可选: bash check-articles.sh path/to/specific-file.md (只检查单篇)
 # 可选: bash check-articles.sh --who-links /vietnam/xxx/slug-name (查引用)
 #
-# v1.3 更新: 禁用词分两类
-#   - 硬禁用词: ERROR
-#   - 语境敏感词: WARN (人工判断使用是否合理)
+# v1.4 更新: 新增 OpenAI 内部引用标记检测 (ERROR)
+#   - :contentReference[oaicite:XX]{index=XX}
+#   - oaicite / {index= / 未替换的 【...】 锚点标记
+#
+# v1.3 更新: 禁用词分硬禁用(ERROR) + 语境敏感(WARN) 两级
 
 DOCS_DIR="src/content/docs"
 CURRENT_YEAR="2026"
@@ -99,11 +101,34 @@ if [ $ERRORS -eq $LINK_BEFORE ]; then
 fi
 
 # ============================================================
-# 2. 禁用词检测 (硬禁用 + 语境敏感)
+# 2. OpenAI 内部引用标记检测 (v1.4 新增)
 # ============================================================
-divider "2. 禁用词检测 (Banned Words)"
+divider "2. OpenAI 引用标记检测 (Citation Markers)"
 
-# 硬禁用词 (任何语境都报 ERROR)
+MARKER_BEFORE=$ERRORS
+for file in $FILES; do
+  # 检测所有可能的 OpenAI 内部引用标记模式
+  markers=$(grep -nE "(:contentReference|oaicite|\{index=)" "$file" 2>/dev/null)
+  
+  if [ -n "$markers" ]; then
+    while IFS= read -r match; do
+      line_num=$(echo "$match" | cut -d: -f1)
+      # 提取匹配的具体标记
+      line_text=$(echo "$match" | cut -d: -f2- | cut -c1-120)
+      error "$file:$line_num → OpenAI 引用标记泄漏: $line_text"
+    done <<< "$markers"
+  fi
+done
+
+if [ $ERRORS -eq $MARKER_BEFORE ]; then
+  ok "没有发现 OpenAI 内部引用标记"
+fi
+
+# ============================================================
+# 3. 禁用词检测 (硬禁用 + 语境敏感)
+# ============================================================
+divider "3. 禁用词检测 (Banned Words)"
+
 HARD_BANNED=(
   "vibrant"
   "bustling"
@@ -139,7 +164,6 @@ HARD_BANNED=(
   "serves as a cornerstone"
 )
 
-# 语境敏感词 (报 WARN, 提示人工判断)
 CONTEXT_SENSITIVE=(
   "leverage"
   "navigate"
@@ -153,7 +177,6 @@ CONTEXT_SENSITIVE=(
 BANNED_BEFORE=$ERRORS
 WARN_BEFORE=$WARNINGS
 
-# 硬禁用词扫描
 for file in $FILES; do
   for word in "${HARD_BANNED[@]}"; do
     matches=$(grep -ni "$word" "$file" 2>/dev/null)
@@ -166,7 +189,6 @@ for file in $FILES; do
   done
 done
 
-# 语境敏感词扫描
 for file in $FILES; do
   for word in "${CONTEXT_SENSITIVE[@]}"; do
     matches=$(grep -ni "$word" "$file" 2>/dev/null)
@@ -187,9 +209,9 @@ elif [ $ERRORS -eq $BANNED_BEFORE ]; then
 fi
 
 # ============================================================
-# 3. 标题年份检测
+# 4. 标题年份检测
 # ============================================================
-divider "3. 标题年份检测 (Year in Title)"
+divider "4. 标题年份检测 (Year in Title)"
 
 YEAR_BEFORE=$ERRORS
 for file in $FILES; do
@@ -213,9 +235,9 @@ if [ $ERRORS -eq $YEAR_BEFORE ]; then
 fi
 
 # ============================================================
-# 4. Affiliate 计数
+# 5. Affiliate 计数
 # ============================================================
-divider "4. Affiliate 检测 (SafetyWing / Wise / World Nomads)"
+divider "5. Affiliate 检测 (SafetyWing / Wise / World Nomads)"
 
 AFF_BEFORE=$ERRORS
 for file in $FILES; do
@@ -258,9 +280,9 @@ if [ $ERRORS -eq $AFF_BEFORE ]; then
 fi
 
 # ============================================================
-# 5. 第一人称检测
+# 6. 第一人称检测
 # ============================================================
-divider "5. 第一人称检测 (First Person)"
+divider "6. 第一人称检测 (First Person)"
 
 FP_BEFORE=$ERRORS
 for file in $FILES; do
@@ -337,9 +359,9 @@ if [ $ERRORS -eq $FP_BEFORE ]; then
 fi
 
 # ============================================================
-# 6. 相对路径内链检测
+# 7. 相对路径内链检测
 # ============================================================
-divider "6. 相对路径内链检测 (Relative Links)"
+divider "7. 相对路径内链检测 (Relative Links)"
 
 REL_BEFORE=$ERRORS
 for file in $FILES; do
@@ -359,9 +381,9 @@ if [ $ERRORS -eq $REL_BEFORE ]; then
 fi
 
 # ============================================================
-# 7. 内链引用地图
+# 8. 内链引用地图
 # ============================================================
-divider "7. 内链引用地图 (Link Map)"
+divider "8. 内链引用地图 (Link Map)"
 
 echo ""
 echo "  每篇文章被引用次数:"
@@ -389,7 +411,7 @@ echo -e "  ${RED}Errors:   $ERRORS${NC}"
 echo -e "  ${YELLOW}Warnings: $WARNINGS${NC}"
 echo ""
 echo "  说明:"
-echo "  - ERROR  = 必须修复 (硬禁用词、断链、affiliate 超标、第一人称等)"
+echo "  - ERROR  = 必须修复 (citation 标记、硬禁用词、断链、affiliate 超标、第一人称等)"
 echo "  - WARN   = 人工判断 (语境敏感词、孤立页面、可能的第一人称等)"
 echo ""
 
