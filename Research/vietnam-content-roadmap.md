@@ -1,9 +1,31 @@
-# ExpatGuide Vietnam 完整选题规划
+# ExpatGuide Vietnam 完整选题规划 v2
 
-**生成日期**: 2026-04-19
+**生成日期**: 2026-04-19(重写版)
 **当前站内文章数**: 20 篇
 **越南站饱和目标**: 55-68 篇(各板块最低 5 篇)
 **下一国家启动阈值**: 总量 ≥ 50 篇 + GSC 稳定流量 30 天
+
+---
+
+## v2 升级说明
+
+**v1 的问题**: 主题描述用"服务商名称命名"(例如"邮局 / Vietnam Post / 国际寄送"),会隐性锁定 GPT 的 scope,导致文章只覆盖某一家服务的产品,忽略读者真实的决策空间。
+
+**v2 改进**: 所有选题用**"how to ... (覆盖哪些选项)"句式**重写,主题描述即可整句复制给 GPT,确保 scope 从一开始就完整。
+
+### 使用方法
+
+在 ChatGPT 项目对话里,Step 2 场景 B(已知主题)时:
+
+```
+按 SOP v2.51 Prompt 1 的格式,帮我生成 1 个选题提案。
+
+Scope: [板块名,例如 Daily Life in Vietnam]
+
+Goal: [直接复制下面表格里的 "主题(复制即用)" 字段整句内容]
+
+请直接返回一个完整 TOPIC SHEET...
+```
 
 ---
 
@@ -31,56 +53,50 @@
 
 **当前 7 篇 / 目标 15-18 篇 / 还差 8-11 篇**
 
-全部普通车道,产量阀门板块。
-
-| 优先级 | 车道 | 建议 slug | 主题 | 备注 |
-|---|---|---|---|---|
-| ⭐⭐⭐ | 🟢 | `vietnam-barber-haircut-2026` | 剪发 / 理发店指南 | 第一月刚需,高搜索 |
-| ⭐⭐⭐ | 🟢 | `vietnam-postal-courier-guide-2026` | 邮局 / Vietnam Post / 国际寄送 | 和 print-scan 形成"文书 trilogy" |
-| ⭐⭐⭐ | 🟢 | `vietnam-grocery-shopping-guide-2026` | 超市 / 菜市场 / Bach Hoa Xanh / Winmart | 抵越第一周必查 |
-| ⭐⭐⭐ | 🟢 | `vietnam-air-quality-pm25-2026` | AQI / 空气净化器 / 雾霾季 | 河内冬季高流量话题 |
-| ⭐⭐⭐ | 🟢 | `vietnam-gym-fitness-guide-2026` | 健身房 / California Fitness / 本地 | 健身刚需 |
-| ⭐⭐⭐ | 🟢 | `vietnam-laundry-services-2026` | 洗衣房 / 自助洗衣 / 家政洗衣 | 日常高频 |
-| ⭐⭐ | 🟢 | `vietnam-mosquitoes-dengue-prevention-2026` | 登革热 / 蚊虫防护 | 时效性强(雨季前发布) |
-| ⭐⭐ | 🟢 | `vietnam-tet-holiday-survival-2026` | 春节期间店铺关门怎么办 | 每年春节前搜索激增 |
-| ⭐⭐ | 🟢 | `vietnam-water-quality-drinking-2026` | 饮用水 / 过滤器 / 桶装水 | 健康相关 |
-| ⭐⭐ | 🟡 | `vietnam-streaming-vpn-2026` | VPN / Netflix 区域 / 法规风险 | ⚠️ 可能踩深度车道红线,写前评估法律敏感度 |
-| ⭐ | 🟢 | `vietnam-public-transport-urban-2026` | 公交 / 地铁(河内/胡志明新线) | 城市专属 |
-| ⭐ | 🟡 | `vietnam-pet-import-2026` | 带宠物来越南 | ⚠️ 涉检疫法规,可能需要深度车道 |
+| 优先级 | 车道 | 建议 slug | 主题(复制即用) |
+|---|---|---|---|
+| ⭐⭐⭐ | 🟢 | `vietnam-barber-haircut-2026` | How to get a haircut in Vietnam as a foreigner — covering expat-oriented barbershops, local salons, chain options like 30Shine, home-visit barbers, pricing ranges, and what to say/show to avoid miscommunication |
+| ⭐⭐⭐ | 🟢 | `vietnam-international-shipping-2026` | How to send items internationally from Vietnam — covering all major options: Vietnam Post (ordinary, registered, EMS, small packet, VNQuickpost), international couriers (DHL, FedEx, UPS), regional express (SF Express, J&T, Ninja Van), plus pricing ranges, timeframes, and when to use which |
+| ⭐⭐⭐ | 🟢 | `vietnam-grocery-shopping-guide-2026` | How to do grocery shopping in Vietnam as an expat — covering all options: modern chains (Winmart, Bach Hoa Xanh, Co.opmart, Mega Market), international supermarkets (Annam Gourmet, K-Market), traditional wet markets, and delivery apps (GrabMart, Bach Hoa Xanh online), with use-case guidance |
+| ⭐⭐⭐ | 🟢 | `vietnam-air-quality-pm25-2026` | How to deal with air quality in Vietnam — covering AQI tracking apps, seasonal patterns by city (especially Hanoi winter haze), air purifier shopping (brands, price ranges, where to buy), masks, home setup strategies, and health precautions |
+| ⭐⭐⭐ | 🟢 | `vietnam-gym-fitness-guide-2026` | How to find a gym or fitness option in Vietnam — covering international chains (California Fitness, Fit24), mid-range local chains (Getfit, Citigym), independent neighborhood gyms, hotel gyms, outdoor running groups, and yoga/pilates studios, with pricing and use-case fit |
+| ⭐⭐⭐ | 🟢 | `vietnam-laundry-services-2026` | How to handle laundry in Vietnam — covering all options: in-unit washers, building laundry services, independent neighborhood giặt ủi shops, pickup-delivery services, and dry cleaning, with pricing per kg and turnaround times |
+| ⭐⭐ | 🟢 | `vietnam-mosquitoes-dengue-2026` | How to protect yourself from mosquitoes and dengue in Vietnam — covering seasonal risk by region, repellent products (local brands vs imported), home setup (screens, nets, electric traps), vaccination status in 2026, and what to do if infected |
+| ⭐⭐ | 🟢 | `vietnam-tet-holiday-survival-2026` | How to survive Tet (Lunar New Year) as an expat in Vietnam — covering what's open and closed (restaurants, groceries, banks, ATMs), stocking up strategy, cash needs, transportation changes, and whether to stay or travel |
+| ⭐⭐ | 🟢 | `vietnam-drinking-water-2026` | How to handle drinking water in Vietnam — covering all options: bottled water brands, home water delivery services (Aquafina, La Vie dispensers), faucet filters, whole-house filtration systems, and what to use for cooking vs drinking |
+| ⭐⭐ | 🟡 | `vietnam-streaming-vpn-2026` | How to access international streaming and websites in Vietnam — covering which services work natively (Netflix VN, YouTube), which are blocked or geo-restricted, VPN options and their legal grey-area status, and workarounds for common use cases ⚠️ 法律模糊,写前评估是否需走深度车道 |
+| ⭐ | 🟢 | `vietnam-urban-public-transport-2026` | How to use public transport in Vietnam's cities — covering Hanoi Metro Line 1-3, HCMC Metro Line 1, city buses, the Vietnam Railways network, and how these compare to Grab/motorbike for daily commute |
+| ⭐ | 🟡 | `vietnam-pet-import-2026` | How to bring a pet to Vietnam — covering import regulations, required documents (rabies vaccine, health certificate, microchip), quarantine rules, airline requirements, and local vet networks ⚠️ 涉检疫法规,可能需深度车道 |
 
 ### Digital Nomad 板块
 
 **当前 3 篇 / 目标 10-12 篇 / 还差 7-9 篇**
 
-全部普通车道。
-
-| 优先级 | 车道 | 建议 slug | 主题 | 备注 |
-|---|---|---|---|---|
-| ⭐⭐⭐ | 🟢 | `best-cafes-remote-work-hanoi-2026` | 河内咖啡馆 workspace | 三城 trilogy 第一篇 |
-| ⭐⭐⭐ | 🟢 | `best-cafes-remote-work-danang-2026` | 岘港咖啡馆 | 你住在那边天然权威 |
-| ⭐⭐⭐ | 🟢 | `best-cafes-remote-work-hcmc-2026` | 西贡咖啡馆 | 完成三城 trilogy |
-| ⭐⭐⭐ | 🟢 | `vietnam-internet-speed-reality-2026` | 实测网速 / 各城市 / 各 ISP | 和 home-internet 互补 |
-| ⭐⭐ | 🟡 | `nomad-visa-pathway-vietnam-2026` | Nomad 视角 visa 策略 | ⚠️ 涉 visa 法规,需深度车道 |
-| ⭐⭐ | 🟢 | `nomad-community-meetups-vietnam-2026` | Nomad 社群 / meetup / Facebook 群 | 社群话题 |
-| ⭐⭐ | 🟢 | `nomad-base-strategy-vietnam-2026` | 以越南为 base 往东南亚跑 | 捕获 niche 搜索需求 |
-| ⭐ | 🟢 | `budget-digital-nomad-vietnam-2026` | 严格预算 nomad 生活 | 和 cost-of-living 差异切角 |
-| ⭐ | 🔴 | `nomad-tax-setup-vietnam-2026` | Nomad 税务 | ⚠️ 必须深度车道 |
+| 优先级 | 车道 | 建议 slug | 主题(复制即用) |
+|---|---|---|---|
+| ⭐⭐⭐ | 🟢 | `best-cafes-remote-work-hanoi-2026` | Best cafes for remote work in Hanoi — covering a shortlist by neighborhood (Old Quarter, West Lake, Ba Dinh, Cau Giay), evaluating WiFi speed, power outlets, noise level, laptop-friendliness, price range, and ideal use cases (deep work vs call-friendly vs long session) |
+| ⭐⭐⭐ | 🟢 | `best-cafes-remote-work-danang-2026` | Best cafes for remote work in Da Nang — covering a shortlist by neighborhood (My An, An Thuong, Han River, An Hai), evaluating WiFi speed, power outlets, noise level, laptop-friendliness, price range, and ideal use cases |
+| ⭐⭐⭐ | 🟢 | `best-cafes-remote-work-hcmc-2026` | Best cafes for remote work in HCMC (Saigon) — covering a shortlist by neighborhood (District 1, District 3, Thao Dien, Phu My Hung), evaluating WiFi speed, power outlets, noise level, laptop-friendliness, price range, and ideal use cases |
+| ⭐⭐⭐ | 🟢 | `vietnam-internet-speed-reality-2026` | How fast is internet in Vietnam really — covering real-world speed tests across major cities, comparison of ISPs (Viettel, VNPT, FPT), home vs mobile vs 5G, backup SIM strategies, and what you actually get for entry/mid/high-tier plans |
+| ⭐⭐ | 🟡 | `nomad-visa-pathway-vietnam-2026` | Which visa should a digital nomad use for Vietnam — covering e-visa strategy, visa runs (Cambodia, Thailand, Laos options), 45-day exemption routing, business visa vs tourist visa trade-offs, and long-term paths like TRC for qualifying nomads ⚠️ 涉 visa 法规,深度车道 |
+| ⭐⭐ | 🟢 | `nomad-community-meetups-vietnam-2026` | How to find a nomad community in Vietnam — covering active Facebook groups by city, regular meetup events (coworking hosted, independent), Slack/Discord communities, and where to meet nomads offline in Hanoi, Da Nang, and Saigon |
+| ⭐⭐ | 🟢 | `vietnam-as-se-asia-base-2026` | How to use Vietnam as a base for exploring Southeast Asia — covering flight connectivity from the three main cities, weekend-trip options, multi-country visa routing, and cost comparison of basing in Vietnam vs Thailand vs Bali for regional hopping |
+| ⭐ | 🟢 | `budget-digital-nomad-vietnam-2026` | How to live as a digital nomad in Vietnam on a tight budget — covering sub-$1000 monthly lifestyle setups by city, accommodation strategies (hostels, co-living, long-term rooms), daily food/transport optimization, and where Vietnam outperforms vs underperforms other cheap nomad destinations |
+| ⭐ | 🔴 | `nomad-tax-setup-vietnam-2026` | How to handle taxes as a digital nomad living in Vietnam — covering 183-day rule, tax residency triggers, non-resident income rules, common setups (foreign company payroll, freelance invoicing, offshore company), and when to consult a Vietnam tax professional ⚠️ 必须深度车道 |
 
 ### Housing 板块
 
 **当前 5 篇 / 目标 10-12 篇 / 还差 5-7 篇**
 
-普通车道和深度车道穿插。
-
-| 优先级 | 车道 | 建议 slug | 主题 | 备注 |
-|---|---|---|---|---|
-| ⭐⭐⭐ | 🟢 | `vietnam-aircon-buying-maintenance-2026` | 空调购买 / 清洗 / 温度建议 | 日常刚需 |
-| ⭐⭐⭐ | 🟢 | `vietnam-apartment-furniture-2026` | 家具购买 / Lazada / Tiki / furniture mall | 抵越后刚需 |
-| ⭐⭐ | 🟢 | `vietnam-moving-services-2026` | 同城搬家 / 跨城搬家 / 打包技巧 | 中等需求 |
-| ⭐⭐ | 🟢 | `vietnam-rental-viewing-checklist-2026` | 看房必查清单 | 和 avoid-rental-scams 互补 |
-| ⭐⭐ | 🟢 | `serviced-apartment-vs-regular-rental-2026` | 类型对比(不涉合同法) | 决策支持类 |
-| ⭐⭐ | 🔴 | `vietnam-rental-contract-guide-2026` | 合同条款解读 | 必须深度车道,高价值 SEO |
-| ⭐⭐ | 🔴 | `tam-tru-registration-guide-2026` | 临时居住登记流程 | 深度车道,涉 Visa 联动 |
+| 优先级 | 车道 | 建议 slug | 主题(复制即用) |
+|---|---|---|---|
+| ⭐⭐⭐ | 🟢 | `vietnam-aircon-guide-2026` | How to handle air conditioning in Vietnam apartments — covering buying decisions (inverter vs non-inverter, brands like Daikin/Panasonic/LG), installation costs, regular cleaning frequency and providers, electricity-saving settings, and maintenance red flags |
+| ⭐⭐⭐ | 🟢 | `vietnam-apartment-furniture-2026` | How to furnish an apartment in Vietnam as an expat — covering all options: local furniture malls (Nha Xinh, UMA, Phố Xinh), international retailers (IKEA alternative via cross-border shipping), e-commerce (Lazada, Tiki, Shopee), secondhand markets, and rental furniture services, with delivery/assembly considerations |
+| ⭐⭐ | 🟢 | `vietnam-moving-services-2026` | How to arrange a move in Vietnam — covering all options: local moving companies for same-city moves, intercity moves (Hanoi to HCMC), international shipping for expats leaving, DIY with hired truck (xe tải), packing supplies, and realistic pricing ranges |
+| ⭐⭐ | 🟢 | `vietnam-rental-viewing-checklist-2026` | What to check when viewing a rental in Vietnam — a practical checklist covering structural issues (water damage, wiring, AC age), documentation (landlord ownership proof, fire safety), utility setup (electricity account type, water source), neighborhood factors (noise, flooding history), and questions to ask the landlord/agent |
+| ⭐⭐ | 🟢 | `serviced-apartment-vs-regular-rental-2026` | Serviced apartment vs regular rental in Vietnam — when to choose each, covering price differences, what's included (cleaning, utilities, furniture), flexibility (short-term vs long-term lease), legal status of each, typical locations, and decision guide by length of stay and lifestyle |
+| ⭐⭐ | 🔴 | `vietnam-rental-contract-guide-2026` | How to read and negotiate a rental contract in Vietnam — covering standard clauses, deposit rules, utility terms, early termination, maintenance responsibilities, what to add/remove, and when to require an English translation ⚠️ 深度车道,法律内容 |
+| ⭐⭐ | 🔴 | `tam-tru-registration-guide-2026` | How to register your Tạm Trú (temporary residence) in Vietnam — covering legal requirements, whose responsibility it is (landlord vs tenant), required documents, online vs in-person registration, consequences of non-registration for visa/TRC applications, and how to push back if a landlord refuses to help ⚠️ 深度车道,涉 Visa 联动 |
 
 ---
 
@@ -90,47 +106,41 @@
 
 **当前 2 篇 / 目标 8-10 篇 / 还差 6-8 篇**
 
-全部深度车道,产量慢但 SEO 价值极高。
-
-| 优先级 | 车道 | 建议 slug | 主题 | 备注 |
-|---|---|---|---|---|
-| ⭐⭐⭐ | 🔴 | `vietnam-bank-transfers-vietqr-2026` | 本地转账 / VietQR / NAPAS | 高需求 |
-| ⭐⭐⭐ | 🔴 | `vietnam-atm-withdrawal-guide-2026` | ATM 使用 / 手续费 / 兼容性 | 刚需 |
-| ⭐⭐⭐ | 🔴 | `vietnam-forex-exchange-guide-2026` | 换汇 / 金店 vs 银行 vs Wise | Wise 自然植入 |
-| ⭐⭐⭐ | 🔴 | `wise-in-vietnam-2026` | Wise 深度指南 | **站点 affiliate 核心页面,单篇价值极高** |
-| ⭐⭐ | 🔴 | `vietnam-remittance-guide-2026` | 跨境汇款回国 | Wise 自然植入 |
-| ⭐⭐ | 🔴 | `vietnam-internet-banking-english-2026` | 网银英文支持对比 | 实用工具类 |
+| 优先级 | 车道 | 建议 slug | 主题(复制即用) |
+|---|---|---|---|
+| ⭐⭐⭐ | 🔴 | `vietnam-bank-transfers-vietqr-2026` | How to send money within Vietnam — covering VietQR system, NAPAS interbank network, bank app transfers, third-party apps (MoMo, ZaloPay, VNPay), and when each is the right choice for domestic transfers |
+| ⭐⭐⭐ | 🔴 | `vietnam-atm-guide-2026` | How to use ATMs in Vietnam as an expat — covering foreign card ATM fees by bank, withdrawal limits, safer vs riskier ATM locations, using local bank ATMs, and how the Decision 2345 biometric rules affect cash access |
+| ⭐⭐⭐ | 🔴 | `vietnam-currency-exchange-2026` | How to exchange currency in Vietnam — covering all options: gold shops (best rates but informal), banks (safe but bad rates), authorized exchange counters at airports and downtown, Wise multi-currency receiving, and bank transfer inbound, with real-rate comparisons |
+| ⭐⭐⭐ | 🔴 | `wise-in-vietnam-2026` | How to use Wise in Vietnam as an expat — covering account setup for expats, receiving money from abroad to VND, sending money home, multi-currency card usage for ATM and retail, fees vs local banks, and common pitfalls ⭐ affiliate 旗舰页 |
+| ⭐⭐ | 🔴 | `vietnam-remittance-home-2026` | How to send money from Vietnam back home — covering all options: Wise, traditional bank wire, Western Union, MoneyGram, and informal channels, with speed/fee comparison and legal considerations |
+| ⭐⭐ | 🔴 | `vietnam-online-banking-english-2026` | Which Vietnamese banks have usable English online banking — covering top banks (Vietcombank, BIDV, Techcombank, VPBank, HSBC Vietnam), English app quality comparison, English customer support availability, and which banks are realistic choices for non-Vietnamese-speakers |
 
 ### Healthcare 板块
 
 **当前 1 篇 / 目标 6-8 篇 / 还差 5-7 篇**
 
-全部深度车道,涉及健康 YMYL,**必须走 Claude QA**。
-
-| 优先级 | 车道 | 建议 slug | 主题 | 备注 |
-|---|---|---|---|---|
-| ⭐⭐⭐ | 🔴 | `expat-hospitals-hanoi-2026` | 河内 expat 友好医院(FV / Vinmec / Hong Ngoc) | 三城 trilogy 第一 |
-| ⭐⭐⭐ | 🔴 | `expat-hospitals-hcmc-2026` | 西贡 expat 医院 | 三城 trilogy 第二 |
-| ⭐⭐⭐ | 🔴 | `expat-hospitals-danang-2026` | 岘港 expat 医院 | 三城 trilogy 第三 |
-| ⭐⭐⭐ | 🔴 | `vietnam-health-insurance-expats-2026` | 保险选择深度对比 | **SafetyWing 自然植入的旗舰页面** |
-| ⭐⭐ | 🔴 | `vietnam-dental-care-expats-2026` | 牙医 / 牙科旅游 | 高频 expat 需求 |
-| ⭐⭐ | 🔴 | `vietnam-pharmacy-medication-guide-2026` | 药店 / 处方药 / OTC | 日常药品指导 |
-| ⭐⭐ | 🔴 | `vietnam-emergency-medical-2026` | 急诊 / 救护车 / 各医院能力 | 安全类关键内容 |
+| 优先级 | 车道 | 建议 slug | 主题(复制即用) |
+|---|---|---|---|
+| ⭐⭐⭐ | 🔴 | `expat-hospitals-hanoi-2026` | Best hospitals for expats in Hanoi — covering major options (FV Hanoi, Vinmec, Hong Ngoc, Hanoi French Hospital), specialties/strengths of each, English-speaking staff availability, price ranges, insurance acceptance, and when to choose which ⚠️ 健康 YMYL,必须 Claude QA |
+| ⭐⭐⭐ | 🔴 | `expat-hospitals-hcmc-2026` | Best hospitals for expats in HCMC — covering major options (FV Hospital, Vinmec Central Park, Columbia Asia, Victoria Healthcare, City International), specialties, English availability, price ranges, insurance acceptance ⚠️ 健康 YMYL |
+| ⭐⭐⭐ | 🔴 | `expat-hospitals-danang-2026` | Best hospitals for expats in Da Nang — covering major options (Vinmec Da Nang, Hoan My Da Nang, Family Hospital, Da Nang International Hospital), specialties, English availability, price ranges ⚠️ 健康 YMYL |
+| ⭐⭐⭐ | 🔴 | `vietnam-health-insurance-expats-2026` | How to choose health insurance as an expat in Vietnam — covering all options: local BHYT, international expat insurance (Cigna, Allianz, Pacific Cross, SafetyWing for short-term), employer coverage, comparison by age/length of stay/budget ⭐ affiliate 旗舰页,SafetyWing 自然植入 |
+| ⭐⭐ | 🔴 | `vietnam-dental-care-2026` | How to find dental care in Vietnam as an expat — covering expat-friendly clinics in major cities, dental tourism consideration, pricing for common procedures (cleaning, filling, implants), insurance acceptance, and what to expect quality-wise vs home countries |
+| ⭐⭐ | 🔴 | `vietnam-pharmacy-medication-2026` | How to get medication in Vietnam — covering pharmacy chains (Pharmacity, Long Chau, An Khang), prescription vs OTC rules, bringing medication from abroad, common medication name translations, and what's available vs restricted |
+| ⭐⭐ | 🔴 | `vietnam-emergency-medical-2026` | What to do in a medical emergency in Vietnam — covering emergency numbers by city, ambulance services (public vs private vs hospital-direct), which hospitals handle what emergencies, evacuation insurance for severe cases, and how to manage if no insurance ⚠️ 安全 YMYL |
 
 ### Visa 板块
 
 **当前 2 篇 / 目标 6-8 篇 / 还差 4-6 篇**
 
-全部深度车道,法规敏感度最高。
-
-| 优先级 | 车道 | 建议 slug | 主题 | 备注 |
-|---|---|---|---|---|
-| ⭐⭐⭐ | 🔴 | `vietnam-evisa-2026` | E-visa 详细操作 | 从 visa-guide 拆出精细版 |
-| ⭐⭐⭐ | 🔴 | `vietnam-visa-exemption-45-days-2026` | 45 天免签策略 | 短期 expat 高搜索 |
-| ⭐⭐ | 🔴 | `vietnam-visa-run-guide-2026` | Visa run / 跨境续签 | 实用刚需 |
-| ⭐⭐ | 🔴 | `trc-renewal-guide-2026` | TRC 续签 | 和申请文章互补 |
-| ⭐⭐ | 🔴 | `dt-visa-investor-guide-2026` | 投资者签证 | 从 TRC 的 DT4 内容扩展 |
-| ⭐⭐ | 🔴 | `vietnam-work-permit-2026` | Work permit | 涉雇佣,高深度 |
+| 优先级 | 车道 | 建议 slug | 主题(复制即用) |
+|---|---|---|---|
+| ⭐⭐⭐ | 🔴 | `vietnam-evisa-step-by-step-2026` | How to apply for a Vietnam e-visa step by step — covering the full official application process, photo/passport requirements, fee structure, processing times, entry point selection, and common rejection reasons — complements the broader visa-guide |
+| ⭐⭐⭐ | 🔴 | `vietnam-45-day-exemption-2026` | How to use Vietnam's 45-day visa exemption as an expat — covering which nationalities qualify, how to re-enter without a visa, the "empty pocket" trap, how it interacts with e-visas, and strategies for staying long-term using exemption + visa combinations |
+| ⭐⭐ | 🔴 | `vietnam-visa-run-guide-2026` | How to do a visa run from Vietnam — covering all options: Cambodia (Phnom Penh, Sihanoukville), Thailand (Bangkok, Chiang Mai), Laos (Vientiane), by flight vs land border, typical cost, timing considerations, and what documents to bring |
+| ⭐⭐ | 🔴 | `trc-renewal-guide-2026` | How to renew your Vietnam TRC — covering timing (when to start), required documents, renewal fees, common issues during renewal vs first application, and what happens if you miss the renewal window — complements the TRC application guide |
+| ⭐⭐ | 🔴 | `vietnam-dt-investor-visa-2026` | How to get a Vietnam investor visa (DT category) — covering DT1 through DT4 thresholds, required investment amounts, required documents, realistic timeline, the DT4 "low-tier" trap, and how DT visas compare to other residence paths |
+| ⭐⭐ | 🔴 | `vietnam-work-permit-2026` | How to get a work permit in Vietnam — covering employer-sponsored process, qualifying positions, required documents (education, experience proof), processing time, and how it interacts with LD visa and TRC applications |
 
 ---
 
@@ -143,14 +153,14 @@
 | Banking | 2 | 8-10 | 6-8 | 全 🔴 |
 | Healthcare | 1 | 6-8 | 5-7 | 全 🔴 |
 | Daily Life | 7 | 15-18 | 8-11 | 🟢 9 + 🟡 2 |
-| Digital Nomad | 3 | 10-12 | 7-9 | 🟢 7 + 🔴 1-2 |
+| Digital Nomad | 3 | 10-12 | 7-9 | 🟢 7 + 🔴 1 + 🟡 1 |
 | **合计** | **20** | **55-68** | **35-48** | |
 
-### 缺口中车道拆分
+### 缺口车道拆分
 
-- 🟢 普通车道: **约 25 篇**(可以按当前 SOP v2.51 流水线生产)
-- 🔴 深度车道: **约 20 篇**(需要完善深度车道 SOP + Claude QA 流程)
-- 🟡 边界话题: **约 3-4 篇**(按具体切角判断)
+- 🟢 普通车道: **约 23 篇**(SOP v2.51 可直接生产)
+- 🔴 深度车道: **约 20 篇**(需先完善深度车道 SOP + Claude QA)
+- 🟡 边界话题: **约 3 篇**(按具体切角判断)
 
 ---
 
@@ -160,73 +170,79 @@
 
 优先级:Daily Life (⭐⭐⭐) + Digital Nomad (⭐⭐⭐) + Housing 普通车道 (⭐⭐⭐)
 
-**目标:从 20 篇 → 35 篇**,主要是:
-- Daily Life 6 篇必写 + 2-3 篇应写
-- Digital Nomad 4 篇必写
-- Housing 普通车道 2 篇必写
+**目标**:从 20 篇 → 35 篇
 
 这个阶段保持日产量 2-3 篇,SOP v2.51 全程可用。
 
 ### 第 2 阶段:完善深度车道 SOP(1-3 天)
 
-Phase 1 冲完后,基于实战经验完善深度车道 SOP:
+Phase 1 冲完后,基于实战经验完善深度车道 SOP(含 Scope Definition Check v2.52 升级):
 - Deep Draft Prompt 的具体校准
 - Claude QA 接入流程
 - 新的 check 规则(法规引用验证、fact-robustness 要求)
+- **Scope Definition Check**(v2.52 新增):强制 Topic Sheet 明确 Primary Scope 和 Adjacent Space,防止隐性锁 scope
 
 ### 第 3 阶段:深度车道突击(2-3 周)
 
 优先级:Healthcare (⭐⭐⭐) + Banking (⭐⭐⭐) + Visa (⭐⭐⭐)
 
-**目标:从 35 篇 → 50+ 篇**,日产量 1 篇,质量优先。
+**目标**:从 35 篇 → 50+ 篇,日产量 1 篇,质量优先。
 
-重点目标:
-- 3 篇 expat-hospitals 三城 trilogy
-- `wise-in-vietnam-2026` 和 `vietnam-health-insurance-expats-2026` (两大 affiliate 核心页)
-- 3-4 篇 Visa 核心话题
+重点旗舰页:
+- `wise-in-vietnam-2026`
+- `vietnam-health-insurance-expats-2026`
+- 3 篇 expat-hospitals trilogy
 
 ### 第 4 阶段:观察期(30 天)
 
-冲到 50+ 篇后,**停止冲产量**,观察:
-- GSC 流量 30 天趋势
-- 哪些文章表现好 / 差
-- 哪些读者行为信号值得关注
+停止冲产量,观察 GSC 流量趋势 + 针对性优化(首页、OG 卡、老文章回溯)。
 
-这个阶段可以做:
-- Open Graph 卡片优化
-- 首页 hero 优化
-- 老文章回溯更新
-- Affiliate 转化分析
+### 第 5 阶段:下一国家决策
 
-### 第 5 阶段:下一国家决策(50+ 篇 + 30 天数据后)
-
-满足所有阈值后,启动 Thailand 站(复用整套 SOP 和工具链)。
+满足所有阈值后,启动 Thailand 站。
 
 ---
 
-## 需要特别注意的 slug 重名风险
+## 选题名称命名原则(供未来添加新选题参考)
 
-以下文件名相似,写的时候注意不要和已有文章冲突:
+**决策空间命名三原则:**
 
-- ✅ 已有:`motorbike-guide-2026` / 待写:无直接重名,但要避免 `motorbike-buying-guide` 这种容易混淆的
-- ✅ 已有:`vietnam-drivers-license-2026` / 待写:无重名
-- ✅ 已有:`vietnam-essential-apps-2026` / 待写:无重名
-- ✅ 已有:`home-internet-vietnam-expats-2026` / 待写:`vietnam-internet-speed-reality-2026`(切角不同,可以并存)
-- ⚠️ 待写的 `vietnam-water-quality-drinking-2026` 如果未来写 "vietnam bottled water guide" 要注意区分
+1. **以"how to ..."或"which ... should"开头**,强调用户的决策问题,而不是"a guide to X service"
+2. **在括号或附注里列出 Adjacent Options**,明确这个选题覆盖哪些竞争/互补选项,避免 GPT 隐性锁 scope
+3. **不用单一服务商命名**,除非文章真的只讲那一家(例如 `wise-in-vietnam-2026` 是合理的,因为它就是 Wise 深度指南)
+
+**反例 vs 正例:**
+
+❌ "邮局 / Vietnam Post / 国际寄送"
+✅ "How to send items internationally from Vietnam (Vietnam Post / DHL / FedEx / SF Express / J&T)"
+
+❌ "超市 / Winmart / Bach Hoa Xanh"
+✅ "How to do grocery shopping in Vietnam (chains / international / wet markets / delivery apps)"
+
+❌ "健身房"
+✅ "How to find a gym option in Vietnam (international chains / local chains / neighborhood / hotel)"
 
 ---
 
 ## 文档使用说明
 
-1. **每写完一篇,来这份文档打钩**(可以在优先级栏前加 ✅ 标记)
-2. **ChatGPT 讨论选题时,参照这份文档的优先级推**(Step 2 的场景 A)
-3. **深度车道板块先不动**,等普通车道冲到 35 篇后再开
-4. **定期(比如每周)根据 GSC 数据微调优先级**——数据告诉你什么该先写
+1. **每写完一篇,在优先级栏前加 ✅**(或新建一个 progress log)
+2. **ChatGPT 讨论选题时**,Step 2 场景 B 直接复制"主题(复制即用)"整句到 Goal 字段
+3. **遇到判断不清的(🟡 边界)**,写前询问我或先查 SOP 的选题分流硬规则
+4. **定期对照 GSC 数据微调优先级**
 
 ---
 
-**Status:**
+**Status (2026-04-19):**
 - Phase 1 可开始:随时
 - Phase 2 预估启动:Phase 1 完成后(约 2 周内)
 - Phase 3 预估启动:Phase 2 完成后(约 3 周内)
 - 下一国家预估启动:**今天起 6-8 周内**(假设节奏维持)
+
+---
+
+## 待办提醒(给未来的自己)
+
+- [ ] SOP v2.52 升级时,加入 Scope Definition Check 硬规则
+- [ ] Phase 1 完成后,完善深度车道 SOP
+- [ ] Thailand 站启动时,复用本 roadmap 模板(保持决策空间命名传统)
