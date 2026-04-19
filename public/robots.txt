@@ -1,7 +1,23 @@
 User-agent: *
 Allow: /
 
-# AI crawlers - opt-out
+# AI Search Agents (allowed - they drive traffic back with citations)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# AI Training Crawlers (blocked - they take without giving back)
 User-agent: GPTBot
 Disallow: /
 
