@@ -1,7 +1,8 @@
 ---
 title: "Vietnam Banking Guide for Expats & Digital Nomads (2026 Updated)"
 description: "A pragmatic 2026 guide to opening a bank account in Vietnam as a foreigner. Covers visa requirements, the Decision 2345 biometric mandate, bank comparisons, and how to avoid account freezes."
-lastUpdated: 2026-04-08
+sidebar:
+  label: "Open a Bank Account"
 ---
 
 Most online guides about banking in Vietnam still describe processes that worked in 2019. The loopholes are closed. In 2026, the system is tied tightly to your visa status and enforced by a national biometric identity mandate that froze tens of millions of accounts in 2025.

@@ -1,7 +1,6 @@
 ---
 title: "Best Neighborhoods in Da Nang for Expats 2026"
 description: "A pragmatic guide to renting in Da Nang, covering the 2025 Quang Nam merger, typhoon traps, and where long-term expats actually live."
-lastUpdated: 2026-04-10
 tags:
   - housing
   - da-nang

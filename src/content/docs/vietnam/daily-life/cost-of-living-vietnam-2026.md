@@ -1,7 +1,6 @@
 ---
 title: "Cost of Living in Vietnam for Expats: The Real Numbers (2026 Updated)"
 description: "A no-nonsense breakdown of what it actually costs to live in Hanoi, HCMC, and Da Nang in 2026. Includes hidden costs, budget traps, and a Southeast Asia cost comparison."
-lastUpdated: 2026-04-09
 ---
 
 Forget the outdated blogs claiming you can live like royalty in Vietnam for $500 a month. Post-inflation realities, surging rents in expat hubs, and tightening visa structures have completely rewritten the financial playbook for 2026. This guide breaks down exactly what you will spend, where your money goes, and the hidden costs that most new arrivals fail to budget for.

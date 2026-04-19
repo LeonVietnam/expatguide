@@ -1,7 +1,6 @@
 ---
 title: "Best Neighborhoods in Hanoi for Expats 2026"
 description: "An honest, BS-free guide to where foreigners actually live in Hanoi right now, broken down by budget, lifestyle, and the latest 2026 rental market shifts."
-lastUpdated: 2026-04-10
 tags:
   - housing
   - hanoi

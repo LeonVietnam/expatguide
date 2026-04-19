@@ -7,6 +7,7 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: 'ExpatGuide Vietnam',
+			lastUpdated: true,
 			social: [],
 			sidebar: [
 				{

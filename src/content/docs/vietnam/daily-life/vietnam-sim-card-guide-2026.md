@@ -1,7 +1,6 @@
 ---
 title: "Vietnam SIM Card Guide for Expats & Travelers (2026 Updated)"
 description: "Everything you need to know to get connected in Vietnam on day one — including the 2026 real-name SIM rules, eSIM strategies, and how to keep your number alive during visa runs."
-lastUpdated: 2026-04-10
 ---
 
 Arriving in Vietnam without a working +84 phone number is like navigating the country blindfolded. You cannot hail a Grab, you cannot order food, and — most critically — you cannot register for Zalo, the app that effectively runs daily life in Vietnam. After the government's sweeping crackdown on unregistered SIM cards, buying connectivity is no longer as simple as handing $5 to a street vendor.

@@ -1,7 +1,6 @@
 ---
 title: "Da Nang vs Hanoi vs Saigon: The Digital Nomad's Remote Work Guide 2026"
 description: "An honest comparison of Vietnam's three main cities for remote work setup in 2026 — internet reality, coworking density, time zone fit, visa pathways, and nomad community. Not another cost-of-living article."
-lastUpdated: 2026-04-11
 ---
 
 This is not a cost-of-living guide, and it is not a neighborhoods guide. If you want to know what rent costs or which districts to live in, those questions are answered better in dedicated articles — see [Cost of Living in Vietnam](/vietnam/daily-life/cost-of-living-vietnam-2026) and the neighborhoods guides for [Hanoi](/vietnam/housing/best-neighborhoods-hanoi-expats-2026), [HCMC](/vietnam/housing/best-neighborhoods-hcmc-expats-2026), and [Da Nang](/vietnam/housing/best-neighborhoods-danang-expats-2026).

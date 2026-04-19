@@ -1,7 +1,6 @@
 ---
 title: "Vietnam Essential Apps for Expats: What to Install in Your First Week (2026)"
 description: "The complete app guide for expats arriving in Vietnam in 2026. Ride-hailing, payments, food delivery, air quality, shopping, and communication — with honest notes on what works without a local bank account."
-lastUpdated: 2026-04-09
 ---
 
 Landing in Vietnam without the right apps is like arriving without shoes. Some things you can sort out in a day; others will catch you off guard at the worst possible moment. This guide covers exactly what you need in your first week, in the order you will need it — with honest notes on what requires a local bank account and what works straight off the plane.

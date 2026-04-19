@@ -1,7 +1,6 @@
 ---
 title: "Healthcare in Vietnam: A Complete Guide for Expats 2026"
 description: "How Vietnam's healthcare system actually works for foreigners — the three-tier hospital structure, expat-friendly hospitals in Hanoi, HCMC, and Da Nang, real costs, insurance options, emergency contacts, and the major 2025 BHYT reforms most expat sites have not covered."
-lastUpdated: 2026-04-11
 ---
 
 This is a navigation guide to Vietnam's medical system for foreigners. It covers how the three-tier hospital structure actually works, which hospitals expats use in each major city, what care typically costs, what your insurance options look like in practice, and what to do in an emergency. It does not cover specific medical conditions, pregnancy and childbirth, or detailed insurance product comparisons — those will be addressed in separate articles in this section.
