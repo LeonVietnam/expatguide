@@ -2,6 +2,7 @@
 title: "Vietnam Driver's License for Foreigners 2026: Step-by-Step Conversion Guide (Post-Reform Update)"
 description: "How to convert your foreign driver's license to a Vietnamese one in 2026, after the March 2025 transfer from Ministry of Transport to Ministry of Public Security. New offices, new fees, new forms — fully updated."
 sidebar:
+  label: "Driver's License Conversion"
   order: 6
 ---
 

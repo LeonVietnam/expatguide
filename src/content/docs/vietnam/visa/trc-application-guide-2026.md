@@ -7,6 +7,8 @@ tags:
   - temporary-residence-card
   - vietnam-immigration
   - expat-guide
+sidebar:
+  label: "TRC Application Guide"
 ---
 
 Most people who land on this page have already done the math on back-to-back 90-day e-visas, lost a weekend to a border run in Cambodia, and started asking whether there's a more stable way to live in Vietnam. The answer for anyone planning to stay longer than a year is the Vietnam Temporary Residence Card, or TRC (*thẻ tạm trú* in Vietnamese) — a physical card issued by the Vietnam Immigration Department that lets you live in the country legally for 1 to 10 years, enter and exit freely without a new visa, open a proper bank account, sign long-term leases, and register a motorbike in your own name.

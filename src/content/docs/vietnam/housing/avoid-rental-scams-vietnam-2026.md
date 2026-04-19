@@ -1,6 +1,8 @@
 ---
 title: "Vietnam Rental Scams & Pitfalls: How to Protect Yourself (2026 Updated)"
 description: "The practical expat guide to renting safely in Vietnam in 2026. Covers electricity overcharging, ghost landlords, Tạm Trú registration, contract red flags, and fire safety risks in budget apartments."
+sidebar:
+  label: "Rental Scams & Safety"
 ---
 
 Vietnam's rental market is accessible, affordable, and full of traps that catch even experienced expats off guard. Overcharged electricity bills, ghost landlords, contracts signed in a language you cannot read, and apartments in buildings that face forced closure under new fire safety laws — these are not hypotheticals. They happen regularly.

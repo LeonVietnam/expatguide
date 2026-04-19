@@ -1,6 +1,8 @@
 ---
 title: "Best Coworking Spaces in Da Nang, Hanoi, and Saigon for Digital Nomads 2026"
 description: "A practical 2026 shortlist of the best coworking spaces in Da Nang, Hanoi, and Saigon for digital nomads, with pricing ranges, neighborhood fit, and use-case guidance."
+sidebar:
+  label: "Recommended Coworking Spaces"
 ---
 
 The best coworking space in Vietnam depends less on brand name and more on how the space will actually be used. For a fast shortlist, the strongest public options are Hana’s and Coworking Danang in Da Nang, The Annam House plus Spaces or Regus in Hanoi, and Dreamplex, The Hive, and cirCO in Saigon.

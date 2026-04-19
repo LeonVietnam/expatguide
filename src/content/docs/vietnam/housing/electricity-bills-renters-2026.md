@@ -1,6 +1,8 @@
 ---
 title: "Vietnam Electricity Bills for Renters in 2026: How to Read Charges, Pay Safely, and Avoid Landlord Overcharging"
 description: "How to identify your electricity billing setup as a renter in Vietnam, what Thông tư 60/2025/TT-BCT says about landlord rebilling, how to spot overcharging, and the safest ways to pay in 2026."
+sidebar:
+  label: "Electricity Bills"
 ---
 
 If a landlord or building manager asks for electricity money in Vietnam, the safest move is to identify the billing setup before paying. A renter is usually in one of three situations: paying EVN directly, reimbursing a landlord who holds the main account, or paying a bundled utility charge inside rent or service fees. Once that is clear, ask for the source bill or meter basis, pay through a traceable channel, and treat any flat per-kWh quote with no supporting bill as a warning sign.

@@ -1,6 +1,8 @@
 ---
 title: "How to Print, Scan, and Courier Documents in Vietnam as a Foreigner 2026"
 description: "Need to print, scan, copy, or send documents in Vietnam? This 2026 guide shows where to go first, what to prepare, and when to use local copy shops, coworking spaces, or courier counters."
+sidebar:
+  label: "Print, Scan, and Courier"
 ---
 
 If the job is small, start with a local copy or stationery shop. If the job is sending documents inside Vietnam, start by checking Vietnam Post or Viettel Post. If the job is sending documents abroad, compare DHL, FedEx, and EMS using live quote and branch-search tools before leaving home. For passports or other hard-to-replace originals, do not treat them like routine paperwork.

@@ -1,6 +1,8 @@
 ---
 title: "International Cards in Vietnam: Where They Work, Where They Fail, and What to Carry Instead (2026)"
 description: "A practical 2026 guide to using foreign Visa and Mastercard cards in Vietnam, where they usually work, where QR or transfer takes over, and what backup payment setup makes daily life easier."
+sidebar:
+  label: "International Cards in Vietnam"
 ---
 
 ## Quick answer

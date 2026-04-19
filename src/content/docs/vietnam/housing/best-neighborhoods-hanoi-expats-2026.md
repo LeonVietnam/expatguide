@@ -6,6 +6,8 @@ tags:
   - hanoi
   - neighborhoods
   - expat-guide
+sidebar:
+  label: "Hanoi: Where to Live"
 ---
 
 Where you live in Hanoi decides what version of the city you actually experience. The Tay Ho version and the Dong Da version are so different they might as well be different cities. The best neighborhoods in Hanoi for expats split sharply along lifestyle lines — if you want craft beer, English menus, and familiar comforts, you live in one district. If you want cheap street food, zero tourists, and full local immersion, you head to another.

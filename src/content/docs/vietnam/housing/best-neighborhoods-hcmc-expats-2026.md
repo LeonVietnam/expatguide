@@ -7,6 +7,8 @@ tags:
   - saigon
   - neighborhoods
   - expat-guide
+sidebar:
+  label: "Saigon: Where to Live"
 ---
 
 Where you live in Ho Chi Minh City decides which Saigon you actually experience. The Thao Dien version and the Cholon version are so different they might as well be different cities.

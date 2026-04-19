@@ -7,6 +7,8 @@ tags:
   - hoi-an
   - neighborhoods
   - expat-guide
+sidebar:
+  label: "Da Nang: Where to Live"
 ---
 
 Da Nang is the Vietnamese city that foreigners don't visit — they move to. While Hanoi and Saigon are places nomads endure for 3 months before burning out, Da Nang is where they sign 12-month leases and start Googling long-term visa options. It operates on a completely different frequency: the air is breathable, the beach is the geographic anchor, and the cost of living is noticeably lower than the two mega-cities.

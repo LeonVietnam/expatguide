@@ -2,6 +2,7 @@
 title: "Cost of Living in Hoi An 2026: Real Monthly Budgets for Expats"
 description: "How much does it cost to live in Hoi An in 2026? Real rent, food, transport, and healthcare numbers for expats and remote workers, updated after the July 2025 Da Nang merger."
 sidebar:
+  label: "Cost of Living: Hoi An"
   order: 5
 ---
 

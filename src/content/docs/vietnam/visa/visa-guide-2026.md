@@ -1,6 +1,8 @@
 ---
 title: "Vietnam Visa Guide for Foreigners: Every Option Explained (2026 Updated)"
 description: "Vietnam visa options for foreigners in 2026: e-visa application, 45-day exemption, visa runs, overstay penalties, and how to get a Temporary Residence Card (TRC). Step-by-step with real costs."
+sidebar:
+  label: "Visa Options"
 ---
 
 Most of the visa advice you'll find online is outdated. Vietnam rewrote its visa rules in late 2023, and a lot has changed since then. This guide covers what actually applies in 2026 — the real entry options, exact costs, how to handle visa runs, and what happens if you overstay.
