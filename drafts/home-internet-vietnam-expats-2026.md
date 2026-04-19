@@ -1,6 +1,8 @@
 ---
 title: "How to Set Up Home Internet in Vietnam as an Expat (2026)"
 description: "A practical 2026 guide to setting up home internet in Vietnam as an expat: which providers to check first, what landlords usually handle, common building restrictions, realistic costs, and the safest backup if installation is delayed."
+sidebar:
+  label: "Setting up home internet"
 ---
 
 If reliable internet matters, the safest setup order is simple: first check whether the apartment already has a working line, then ask the landlord or building manager whether the building restricts provider choice, and only then compare FPT, Viettel, and VNPT. If a new line is needed, keep a local SIM or eSIM hotspot ready for the first few days instead of assuming installation will be immediate.
