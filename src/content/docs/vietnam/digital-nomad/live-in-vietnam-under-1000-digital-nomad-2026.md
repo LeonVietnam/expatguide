@@ -1,8 +1,8 @@
 ---
-title: "How to Live in Vietnam on Under $1,000 a Month as a Digital Nomad (2026)"
-description: "Can a digital nomad still live in Vietnam for under $1,000 in 2026? Compare Da Nang, Hanoi, and HCMC by housing, food, transport, and trade-offs."
+title: "How to Live in Vietnam for Under $1,000 a Month as a Digital Nomad (2026)"
+description: "Can a digital nomad still live in Vietnam for under $1,000 a month in 2026? Compare Da Nang, Hanoi, and HCMC by housing, food, transport, and trade-offs."
 sidebar:
-  label: "Under $1,000 in Vietnam"
+  label: "Vietnam Under $1,000 a Month"
 ---
 
 ## The short answer
