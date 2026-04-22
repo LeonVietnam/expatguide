@@ -6,7 +6,7 @@ export default defineConfig({
 	site: 'https://expatguide.site',
 	integrations: [
 		starlight({
-			title: 'ExpatGuide Vietnam',
+			title: 'ExpatGuide',
 			lastUpdated: true,
 			social: [],
 			sidebar: [
