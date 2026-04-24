@@ -22,7 +22,7 @@ Mosquitoes need a dengue-aware approach, not just nuisance control. Ants usually
 
 *Any 2026 price or response-time examples below are approximate public reference points, not a fixed national market rate.*
 
-## Start by identifyi ng which problem is actually happening
+## Start by identifying which problem is actually happening
 
 Treat these as three different apartment problems, not one general “bug issue.”
 
