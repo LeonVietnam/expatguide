@@ -1,12 +1,17 @@
- # ExpatGuide 每日内容生产操作 SOP v1.4（普通车道专用）
+ # ExpatGuide 每日内容生产操作 SOP v1.5（普通车道专用）
 
 从 0 到发布的通用流程模板。每次写新文章照这个走就行。
+
+## v1.5 更新说明（vs v1.4）
+
+1. 深度车道跳转目标更新为 `deep-lane-3-window-ops-manual-v6-zh.md`。
+2. 普通车道流程本身不变；本版只同步 deep lane 操作手册版本引用。
 
 ## v1.4 更新说明（vs v1.3）
 
 1. SOP 引用从 `expatguide_sop_v2.53_normal.md` 更新为 **`expatguide_sop_v2.53_normal.md`**。
 2. 本文档明确为**普通车道专用**，不再包含 Deep Draft / Claude QA / GPT-only deep lane 的执行细节。
-3. 深度主题只在 Step 2 做路由判断；一旦命中 deep 条件，停止普通车道并转入 `deep-lane-3-window-ops-manual-v4-zh.md`。
+3. 深度主题只在 Step 2 做路由判断；一旦命中 deep 条件，停止普通车道并转入 `deep-lane-3-window-ops-manual-v6-zh.md`。
 4. 保留 v1.3 的 11 步普通文章发布流程。
 
 ## v1.2 更新说明（vs v1.1）
@@ -505,6 +510,6 @@ bash check-articles.sh --who-links /vietnam/[板块]/[slug]
 1. 不要在普通车道里“先试试看”。
 2. 不要用普通 Prompt 4 直接写深度文章。
 3. 切到 `ExpatGuide Deep Draft` 项目。
-4. 按 `deep-lane-3-window-ops-manual-v4-zh.md` 执行 GPT-only deep lane。
+4. 按 `deep-lane-3-window-ops-manual-v6-zh.md` 执行 GPT-only deep lane。
 
 普通车道 SOP 只负责把高风险题路由出去，不承接 deep lane 的写作、QA 或 patch。

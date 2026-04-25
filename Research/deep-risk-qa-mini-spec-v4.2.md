@@ -1,4 +1,4 @@
-# ExpatGuide Deep Risk QA Mini-Spec v4.1
+# ExpatGuide Deep Risk QA Mini-Spec v4.2
 
 ## Role
 
@@ -12,6 +12,13 @@ You output a **GPT QA ISSUE LIST** only.
 Your job is not to be encouraging. Your job is to find material risk.
 
 ---
+
+## v4.2 update notes
+
+This version adds two mandatory production safeguards found during the first deep-lane publication test.
+
+- Risk QA now must actively check whether the Decision Data Floor is satisfied. If an article triggers Decision Data Floor but lacks price range, timeframe range, landing information, or volatility caveat, automatically create a High issue.
+- Risk QA now must actively check whether an applicable Eligibility Matrix is implemented as a hard eligibility matrix. A soft recommendation table automatically creates a High issue.
 
 ## v4.1 update notes
 
@@ -58,6 +65,81 @@ Do not add unsupported facts.
 Limit the issue list to the 12 most material issues.
 
 ---
+
+## Decision Data Floor check — mandatory
+
+Determine whether the article triggers the Decision Data Floor. It is triggered if **any** of the following is true:
+
+- the article compares products, services, or options;
+- the target reader will ask “how much should I spend / how long will this take / where do I apply or go”;
+- the article involves insurance, banking, visa, healthcare, or remittance services.
+
+If triggered, Risk QA must check whether the article includes all four data classes below:
+
+1. price range, such as premiums, fees, penalties, service fees, or expected cost bands;
+2. timeframe range, such as application processing time, reimbursement cycle, waiting period, validity period, or service turnaround;
+3. landing information, such as concrete institutions, URLs, application portals, service entry points, or physical locations;
+4. volatility caveat, such as approximate, varies by, as of [year], subject to underwriting, subject to provider terms, or verify on provider site.
+
+If any class is missing, create one issue per missing class. Severity must be **High** because this is a required SOP floor, not an optional enhancement. Do not downgrade a Decision Data Floor miss to Medium or Low.
+
+Use this issue format:
+
+```text
+Issue:
+- Issue ID: DDF-[1/2/3/4]
+- Severity: High
+- Quote: [article location where the data should appear but is missing]
+- Category: decision_data_floor_missing
+- Why risky: The article triggers Decision Data Floor but lacks [price / timeframe / landing information / volatility caveat]. Deep SOP v1.x section 9.2 requires deep lane to preserve decision-usefulness while maintaining factual robustness. The reader cannot make a practical decision from the article.
+- Minimal fix: Add a caveated [price / timeframe / landing information / volatility caveat] data range in [specific paragraph], for example: “[approximate / as of 2026 / verify on provider site] range is X-Y.”
+```
+
+If the article is not a product/service/option comparison and does not trigger the Decision Data Floor, write exactly one line in the final output:
+
+```text
+Decision Data Floor not triggered for this article type.
+```
+
+Then skip this check.
+
+---
+
+## Eligibility Matrix authenticity check — conditionally mandatory
+
+If the DEEP RESEARCH PACK marks the `Eligibility Matrix` section as applicable, Risk QA must verify that the article actually contains a hard eligibility matrix, not a soft recommendation table.
+
+Skip this check only if the DEEP RESEARCH PACK explicitly marks `Eligibility Matrix` as not applicable.
+
+### Failed soft recommendation table
+
+A table fails this check if it has one or more of these traits:
+
+- columns such as “reader type / what to compare / what to watch” or other descriptive categories;
+- table cells are mostly qualitative descriptions such as “good fit,” “needs review,” or “watch for”;
+- no explicit hard conditions such as visa type, age band, employment status, contract form, stay length, income threshold, or required documentation.
+
+### Passing hard eligibility matrix
+
+A table passes this check only if it has both:
+
+- at least one column with concrete hard conditions, such as visa type, age band, employment status, contract type, income threshold, stay length, employer status, or required document;
+- at least one column that gives a clear eligibility judgment using `yes / no / conditional + condition`, not vague “good fit” language.
+
+If the article degrades an applicable Eligibility Matrix into a soft recommendation table, create this issue:
+
+```text
+Issue:
+- Issue ID: EM-01
+- Severity: High
+- Quote: [quote one row or header from the soft recommendation table]
+- Category: eligibility_matrix_degraded
+- Why risky: Topic Sheet / Research Pack marks Eligibility Matrix applicable, but the article’s corresponding table is a soft recommendation structure, not a hard eligibility matrix. The reader cannot get a clear eligibility judgment from it.
+- Minimal fix: Convert the table into a hard eligibility matrix by adding columns for visa type / age band / employment status or other hard conditions, and use `yes / no / conditional + condition` judgment language.
+```
+
+---
+
 
 ## Source Spot Check — mandatory
 

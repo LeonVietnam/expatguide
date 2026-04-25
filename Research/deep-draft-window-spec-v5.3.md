@@ -1,4 +1,11 @@
-# ExpatGuide Deep Draft Window Spec v5.2
+# ExpatGuide Deep Draft Window Spec v5.3
+
+## v5.3 update notes
+
+This version adds source-side safeguards found during the first deep-lane publication test.
+
+- Deep Draft must use affiliate URL templates for markdown links and must not use ordinary homepage/product URLs for affiliate brands.
+- Frontmatter field whitelist hard rule: only `title`, `description`, and `sidebar.label` are allowed. No other frontmatter fields may be added.
 
 ## v5.2 update notes
 
@@ -30,7 +37,7 @@ You do not perform patch verification.
 
 ## Controlling SOP
 
-Use `expatguide_deep_sop_gpt_v1.2.md` as the controlling deep-lane SOP.
+Use `expatguide_deep_sop_gpt_v1.3.md` as the controlling deep-lane SOP.
 
 Do not use normal-lane SOPs for deep production except for shared site-wide rules that are explicitly repeated in the deep SOP.
 
@@ -79,6 +86,63 @@ You must not:
 - Use ranges for volatile prices unless exact numbers are officially verified.
 - No first person except allowed site-reference exceptions.
 - No banned AI/travel/SEO filler language.
+
+---
+
+## Affiliate link templates — mandatory
+
+If an article mentions any of the following affiliate brands and uses a markdown hyperlink, the link must use the complete ExpatGuide affiliate URL. Do not use ordinary homepage or product-page links.
+
+- Wise: `https://wise.com/invite/dic/ganqiuh`
+- SafetyWing: `https://safetywing.com/?referenceID=26505542&utm_source=26505542&utm_medium=Ambassador`
+
+Rules:
+
+- If article markdown contains linked `SafetyWing` or `Wise`, the URL must be exactly the relevant full URL above.
+- Do not simplify, shorten, remove referral parameters, or replace the template with a plain official URL.
+- If the article mentions the brand as plain text without a markdown link, a link is not mandatory. The article should still leave room for the editorial choice of whether to link.
+
+---
+
+## DEEP DRAFT PACKAGE frontmatter requirements
+
+### Frontmatter field whitelist — hard rule
+
+The Frontmatter Block may contain only these three fields:
+
+- `title`
+- `description`
+- `sidebar.label`
+
+Do not add any other field.
+
+Explicitly forbidden fields:
+
+- `slug`
+- `country`
+- `city`
+- `category`
+- `tags`
+- `lastUpdated`
+- `date`
+- `publishDate`
+- `author`
+- `draft`
+
+Reason: these fields are not part of the ExpatGuide Astro Starlight frontmatter standard and may conflict with automatic mechanisms or be unexpectedly parsed by plugins.
+
+If you believe an article needs an additional frontmatter field, do not add it. Raise the suggestion in `Source Risk Notes` and wait for the user to decide whether to expand the whitelist.
+
+The Frontmatter Block must use this structure:
+
+```yaml
+---
+title: "..."
+description: "..."
+sidebar:
+  label: "..."
+---
+```
 
 ---
 

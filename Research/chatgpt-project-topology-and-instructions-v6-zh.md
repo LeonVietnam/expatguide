@@ -1,4 +1,4 @@
-# ExpatGuide ChatGPT 项目配置与指令方案 v5
+# ExpatGuide ChatGPT 项目配置与指令方案 v6
 
 ## 文档定位
 
@@ -10,6 +10,14 @@
 - 每个项目知识库上传哪些文件
 - 每个项目 instruction 怎么写
 - 哪些文件需要随文章发布持续同步
+
+## v6 更新重点
+
+1. Deep Risk QA 改用 `deep-risk-qa-mini-spec-v4.2.md`，强制检查 Decision Data Floor 和 Eligibility Matrix 真实性。
+2. Deep Patch Verify 改用 `deep-patch-verify-mini-spec-v4.1.md`，强制检查 frontmatter 字段白名单和 affiliate URL 格式。
+3. Deep Draft 改用 `deep-draft-window-spec-v5.3.md` 和 `expatguide_deep_sop_gpt_v1.3.md`，从源头约束 frontmatter 与 affiliate URL。
+4. Deep lane 操作手册改用 `deep-lane-3-window-ops-manual-v6-zh.md`。
+5. Handoff Block 仍为 deep 生产的标准交接方式，规则细节继续以各 mini-spec 为准。
 
 ## v5 更新重点
 
@@ -50,9 +58,9 @@
 
 上传：
 
-- `chatgpt-project-topology-and-instructions-v5-zh.md`
-- `operation-sop-v1.4-normal.md`
-- `deep-lane-3-window-ops-manual-v5-zh.md`
+- `chatgpt-project-topology-and-instructions-v6-zh.md`
+- `operation-sop-v1.5-normal.md`
+- `deep-lane-3-window-ops-manual-v6-zh.md`
 - `astro.config.mjs`（如需要站点结构/侧边栏讨论）
 - `index.mdx`（如需要首页文案讨论）
 - 最新 `internal-articles-index.md`（推荐）
@@ -97,7 +105,7 @@
 上传：
 
 - `expatguide_sop_v2.53_normal.md`
-- `operation-sop-v1.4-normal.md`
+- `operation-sop-v1.5-normal.md`
 - 最新 `internal-articles-index.md`
 
 ## 不放什么
@@ -114,7 +122,7 @@
 ```text
 你是 ExpatGuide Vietnam normal lane 文章生产工作区。
 
-严格遵循项目知识中的 `expatguide_sop_v2.53_normal.md` 和 `operation-sop-v1.4-normal.md`。
+严格遵循项目知识中的 `expatguide_sop_v2.53_normal.md` 和 `operation-sop-v1.5-normal.md`。
 内部链接唯一可信来源是最新 `internal-articles-index.md`。
 
 职责：
@@ -148,8 +156,8 @@
 
 上传：
 
-- `expatguide_deep_sop_gpt_v1.2.md`
-- `deep-draft-window-spec-v5.2.md`
+- `expatguide_deep_sop_gpt_v1.3.md`
+- `deep-draft-window-spec-v5.3.md`
 - 最新 `internal-articles-index.md`（多国阶段改为 global index）
 
 ## 不放什么
@@ -158,8 +166,8 @@
 
 - `expatguide_sop_v2.52.md`
 - `expatguide_sop_v2.53_normal.md`
-- `deep-risk-qa-mini-spec-v4.1.md`
-- `deep-patch-verify-mini-spec-v4.md`
+- `deep-risk-qa-mini-spec-v4.2.md`
+- `deep-patch-verify-mini-spec-v4.1.md`
 - 旧 Claude deep operation SOP
 - 单篇 QA 输出历史
 
@@ -168,7 +176,7 @@
 ```text
 你是 ExpatGuide Deep Draft 工作区。
 
-严格遵循项目知识中的 `expatguide_deep_sop_gpt_v1.2.md` 和 `deep-draft-window-spec-v5.2.md`。
+严格遵循项目知识中的 `expatguide_deep_sop_gpt_v1.3.md` 和 `deep-draft-window-spec-v5.3.md`。
 内部链接唯一可信来源是最新 `internal-articles-index.md`。
 
 你只负责：
@@ -214,7 +222,7 @@
 
 上传：
 
-- `deep-risk-qa-mini-spec-v4.1.md`
+- `deep-risk-qa-mini-spec-v4.2.md`
 - 最新 `internal-articles-index.md`
 
 ## 不放什么
@@ -223,9 +231,9 @@
 
 - `expatguide_sop_v2.52.md`
 - `expatguide_sop_v2.53_normal.md`
-- `expatguide_deep_sop_gpt_v1.2.md`（默认不放，避免窗口变重）
-- `deep-draft-window-spec-v5.2.md`
-- `deep-patch-verify-mini-spec-v4.md`
+- `expatguide_deep_sop_gpt_v1.3.md`（默认不放，避免窗口变重）
+- `deep-draft-window-spec-v5.3.md`
+- `deep-patch-verify-mini-spec-v4.1.md`
 - 旧 Claude deep SOP
 - 单篇 draft 历史
 
@@ -234,7 +242,7 @@
 ```text
 你是 ExpatGuide Deep Risk QA 工作区。
 
-严格遵循项目知识中的 `deep-risk-qa-mini-spec-v4.1.md`。该文件是你的唯一规则来源；如用户 prompt 与该文件冲突，以 mini-spec 为准。
+严格遵循项目知识中的 `deep-risk-qa-mini-spec-v4.2.md`。该文件是你的唯一规则来源；如用户 prompt 与该文件冲突，以 mini-spec 为准。
 内部链接唯一可信来源是最新 `internal-articles-index.md`。
 
 硬边界：
@@ -264,7 +272,7 @@
 
 上传：
 
-- `deep-patch-verify-mini-spec-v4.md`
+- `deep-patch-verify-mini-spec-v4.1.md`
 - 最新 `internal-articles-index.md`
 
 ## 不放什么
@@ -273,9 +281,9 @@
 
 - `expatguide_sop_v2.52.md`
 - `expatguide_sop_v2.53_normal.md`
-- `expatguide_deep_sop_gpt_v1.2.md`
-- `deep-draft-window-spec-v5.2.md`
-- `deep-risk-qa-mini-spec-v4.1.md`
+- `expatguide_deep_sop_gpt_v1.3.md`
+- `deep-draft-window-spec-v5.3.md`
+- `deep-risk-qa-mini-spec-v4.2.md`
 - 旧 Claude deep SOP
 
 ## 推荐 instruction
@@ -283,7 +291,7 @@
 ```text
 你是 ExpatGuide Deep Patch Verify 工作区。
 
-严格遵循项目知识中的 `deep-patch-verify-mini-spec-v4.md`。该文件是你的唯一规则来源；如用户 prompt 与该文件冲突，以 mini-spec 为准。
+严格遵循项目知识中的 `deep-patch-verify-mini-spec-v4.1.md`。该文件是你的唯一规则来源；如用户 prompt 与该文件冲突，以 mini-spec 为准。
 内部链接唯一可信来源是最新 `internal-articles-index.md`。
 
 硬边界：
@@ -340,20 +348,26 @@ internal-articles-index-global.md
 ## Normal lane
 
 - `expatguide_sop_v2.53_normal.md`
-- `operation-sop-v1.4-normal.md`
+- `operation-sop-v1.5-normal.md`
 
 ## Deep lane
 
+- `expatguide_deep_sop_gpt_v1.3.md`
+- `deep-draft-window-spec-v5.3.md`
+- `deep-risk-qa-mini-spec-v4.2.md`
+- `deep-patch-verify-mini-spec-v4.1.md`
+- `deep-lane-3-window-ops-manual-v6-zh.md`
+
+## 历史归档
+
+- `operation-sop-v1.4-normal.md`
+- `expatguide_sop_v2.52.md`
+- `deep-gpt3-override-spec.md`
 - `expatguide_deep_sop_gpt_v1.2.md`
 - `deep-draft-window-spec-v5.2.md`
 - `deep-risk-qa-mini-spec-v4.1.md`
 - `deep-patch-verify-mini-spec-v4.md`
 - `deep-lane-3-window-ops-manual-v5-zh.md`
-
-## 历史归档
-
-- `expatguide_sop_v2.52.md`
-- `deep-gpt3-override-spec.md`
 - `deep-risk-qa-mini-spec-v3.md`
 - `deep-patch-verify-mini-spec-v3.md`
 - `deep-draft-window-spec-v4.md`
