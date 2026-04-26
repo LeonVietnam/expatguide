@@ -99,7 +99,8 @@ Each violation below must become a separate issue.
 
 - `title` must include the year, either `2026` or the current year. Missing year → High.
 - `description` should be 120–160 characters. Outside this range → Medium.
-- `sidebar.label` should be 3–5 words and must not exceed 6 words. More than 6 words → Medium.
+- `sidebar.label` should usually be 2–5 words, may be 1 word only if unambiguous, and must not exceed 6 words. More than 6 words → Medium.
+- `sidebar.label` should be a short navigation label, not a second SEO title.
 - `sidebar.label` should not redundantly repeat the section name. For example, under Healthcare, do not use labels such as `Health Insurance in Vietnam Healthcare`. Redundant section name → Medium.
 
 ---

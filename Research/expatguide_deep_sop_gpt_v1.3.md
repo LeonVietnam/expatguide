@@ -91,6 +91,7 @@
 
 - 标题必须带年份。
 - frontmatter 必须包含 `sidebar.label`。
+- `sidebar.label` 是导航短名，不是第二个 SEO 标题。通常使用 2–5 个词；1 个词只在高度明确、不易歧义时允许；最多不超过 6 个词。不要为了凑词数硬加 `Guide` / `Choice` / `in Vietnam` 等低信息量词。
 - Frontmatter 严格使用白名单字段：`title` / `description` / `sidebar.label`。禁止添加 `slug` / `country` / `city` / `category` / `tags` / `lastUpdated` / `date` / `publishDate` / `author` / `draft` 等非标字段。
 - 内链必须以 `/` 开头。
 - 内链 slug 必须存在于最新 `internal-articles-index.md`。
@@ -259,11 +260,24 @@ Deep Draft 必须输出：
 - Internal Links Used
 - Affiliate Mentions Used
 - Source Risk Notes
+- SEO/GEO Notes
 - Deep Self-Audit
 
 Frontmatter Block 只能包含 `title` / `description` / `sidebar.label` 三个字段，不允许添加 `slug` / `country` / `city` / `category` / `tags` / `lastUpdated` / `date` / `publishDate` / `author` / `draft` 等任何额外字段。
 
+`sidebar.label` 必须是短导航标签：通常 2–5 个词，1 个词只在高度明确时允许，最多不超过 6 个词。它不应重复 sidebar 层级中已经存在的国家、板块或目录名，也不应写成完整 SEO 标题。
+
 Article 必须从第一个 `##` 开始，无 H1，无重复 frontmatter。
+
+SEO/GEO Notes must include:
+
+- Primary search intent addressed: yes/no
+- Main follow-up questions covered: yes/no
+- AI-extractable answer block present: yes/no
+- Decision table / eligibility matrix / checklist present: yes/no
+- Entity aliases covered: yes/no
+- Headings are retrieval-friendly: yes/no
+- No SEO-driven removal of caveats: yes/no
 
 Deep Self-Audit 至少覆盖：
 

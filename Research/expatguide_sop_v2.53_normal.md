@@ -639,6 +639,11 @@ Check:
 - affiliate caps and natural affiliate opportunity
 - Scope Completeness
 - Decision Data Floor
+- SEO/GEO readiness:
+  - primary search intent 是否在首屏回答
+  - main follow-up questions 是否覆盖
+  - headings 是否可被搜索/AI 检索直接理解
+  - 是否包含可摘取的 decision table / checklist / rule-of-thumb
 - markdown/frontmatter correctness
 
 Patch rules:

@@ -6,6 +6,7 @@ This version adds source-side safeguards found during the first deep-lane public
 
 - Deep Draft must use affiliate URL templates for markdown links and must not use ordinary homepage/product URLs for affiliate brands.
 - Frontmatter field whitelist hard rule: only `title`, `description`, and `sidebar.label` are allowed. No other frontmatter fields may be added.
+- Clarified `sidebar.label` wording rule: labels should usually be 2–5 words, may be 1 word only if unambiguous, and must not exceed 6 words.
 
 ## v5.2 update notes
 
@@ -143,6 +144,18 @@ sidebar:
   label: "..."
 ---
 ```
+
+### sidebar.label wording rule
+
+`sidebar.label` is a navigation label, not a second SEO title.
+
+Rules:
+
+- It should usually be 2–5 words.
+- 1-word labels are allowed only if highly specific and not ambiguous.
+- It must not exceed 6 words.
+- It should not redundantly repeat the section name, country name, or category name when that context is already provided by the sidebar hierarchy.
+- Prefer clear labels such as `Health Insurance`, `Visa Options`, `Foreign Cards`, `Airport Transfers`, or `Essential Apps` over padded labels created only to reach a word count.
 
 ---
 
