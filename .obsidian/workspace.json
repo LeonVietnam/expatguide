@@ -199,9 +199,10 @@
   },
   "active": "c5925c7e6959b3e2",
   "lastOpenFiles": [
-    "src/content/docs/vietnam/banking/atms-vietnam-expats-2026.md",
+    "src/content/docs/vietnam/banking/exchange-currency-vietnam-2026.md",
     "Research/vietnam-content-roadmap.md",
     "Research/deep-lane-3-window-ops-manual-v6-zh.md",
+    "src/content/docs/vietnam/banking/atms-vietnam-expats-2026.md",
     "Research/deep-patch-verify-mini-spec-v4.1.md",
     "src/content/docs/vietnam/banking/send-money-within-vietnam-2026.md",
     "Claude Project/benchmark-health-insurance-2026.md",
@@ -224,7 +225,6 @@
     "Research/operation-sop-v1.3.md",
     "Research/expatguide_deep_sop_gpt_v1.md",
     "Research/chatgpt-project-topology-and-instructions-v4-zh.md",
-    "Research/deep-lane-3-window-ops-manual-v4-zh.md",
-    "Research/deep-patch-verify-mini-spec-v4.md"
+    "Research/deep-lane-3-window-ops-manual-v4-zh.md"
   ]
 }
