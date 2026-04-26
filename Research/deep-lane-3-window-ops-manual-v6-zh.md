@@ -216,6 +216,8 @@ VALIDATION PACK — FINAL 确认。请按 GPT-only Deep SOP 生成完整 DEEP DR
 
 不要 patch。
 不要宣布 ready for publication。
+不要生成Claim Sheet
+不要生成Risk QA Handoff Block
 ````
 
 ---

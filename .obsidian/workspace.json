@@ -20,6 +20,20 @@
               "icon": "lucide-file",
               "title": "deep-lane-3-window-ops-manual-v6-zh"
             }
+          },
+          {
+            "id": "522e3694fff43913",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Research/vietnam-content-roadmap.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "vietnam-content-roadmap"
+            }
           }
         ]
       }
@@ -78,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 409.5
+    "width": 375.5
   },
   "right": {
     "id": "1e054ddb602cb17f",
@@ -185,6 +199,9 @@
   },
   "active": "c5925c7e6959b3e2",
   "lastOpenFiles": [
+    "src/content/docs/vietnam/banking/atms-vietnam-expats-2026.md",
+    "Research/vietnam-content-roadmap.md",
+    "Research/deep-lane-3-window-ops-manual-v6-zh.md",
     "Research/deep-patch-verify-mini-spec-v4.1.md",
     "src/content/docs/vietnam/banking/send-money-within-vietnam-2026.md",
     "Claude Project/benchmark-health-insurance-2026.md",
@@ -192,10 +209,8 @@
     "Claude Project/deep-lane-review-protocol.md",
     "Claude Project/deep-lane-review-constitution.md",
     "Claude Project",
-    "Research/vietnam-content-roadmap.md",
     "Research/expatguide_deep_sop_gpt_v1.3.md",
     "Research/deep-draft-window-spec-v5.3.md",
-    "Research/deep-lane-3-window-ops-manual-v6-zh.md",
     "Research/expatguide_sop_v2.53_normal.md",
     "Research/deep-risk-qa-mini-spec-v4.2.md",
     "Research/operation-sop-v1.5-normal.md",
@@ -210,7 +225,6 @@
     "Research/expatguide_deep_sop_gpt_v1.md",
     "Research/chatgpt-project-topology-and-instructions-v4-zh.md",
     "Research/deep-lane-3-window-ops-manual-v4-zh.md",
-    "Research/deep-patch-verify-mini-spec-v4.md",
-    "Research/deep-risk-qa-mini-spec-v4.1.md"
+    "Research/deep-patch-verify-mini-spec-v4.md"
   ]
 }
