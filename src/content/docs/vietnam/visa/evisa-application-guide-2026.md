@@ -219,7 +219,7 @@ Before going to the airport, land border, or seaport, confirm:
 - the exit gate is reasonable for the travel plan;
 - the e-visa is single-entry or multiple-entry as needed;
 - passport validity and blank pages are enough for airline and border checks;
-- a printed or offline copy is available.
+- a printed copy is available.
 
 Passport validity and blank-page expectations can be checked by airlines and foreign-government travel-advice systems, even when the e-visa form itself focuses on passport details. As a planning buffer, avoid traveling with a passport close to expiry or with no usable blank pages.
 
