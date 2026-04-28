@@ -1,25 +1,12 @@
- # ExpatGuide 每日内容生产操作 SOP v1.5（普通车道专用）
+ # ExpatGuide 每日内容生产操作 SOP v1.6（普通车道专用）
 
 从 0 到发布的通用流程模板。每次写新文章照这个走就行。
 
-## v1.5 更新说明（vs v1.4）
+## 当前更新说明
 
-1. 深度车道跳转目标更新为 `deep-lane-3-window-ops-manual-v6-zh.md`。
+1. 深度车道跳转目标更新为 `deep-lane-3-window-ops-manual-v6.1-zh.md`。
 2. 普通车道流程本身不变；本版只同步 deep lane 操作手册版本引用。
-
-## v1.4 更新说明（vs v1.3）
-
-1. SOP 引用从 `expatguide_sop_v2.53_normal.md` 更新为 **`expatguide_sop_v2.53_normal.md`**。
-2. 本文档明确为**普通车道专用**，不再包含 Deep Draft / Claude QA / GPT-only deep lane 的执行细节。
-3. 深度主题只在 Step 2 做路由判断；一旦命中 deep 条件，停止普通车道并转入 `deep-lane-3-window-ops-manual-v6-zh.md`。
-4. 保留 v1.3 的 11 步普通文章发布流程。
-
-## v1.2 更新说明（vs v1.1）
-
-1. SOP 版本号统一升级到 v2.5
-2. 新增 Step 13:GSC 索引提交——发布即索引,避免新文章等 Google 自然爬取
-3. Step 7 验证部分加入 OpenAI citation marker 错误处理说明
-4. Step 5 写作 prompt 提醒:关注 GPT 的 affiliate_opportunity_check 自检结果
+3. 本文档明确为**普通车道专用**，不包含 Deep Draft / Risk QA / Patch Verify 的执行细节；命中 deep 条件时直接转入当前 deep lane 操作手册。
 
 ---
 
@@ -229,7 +216,7 @@ Validation Pack 确认。现在按 SOP v2.53 normal Prompt 4 执行:
 
 **在哪:** VS Code 编辑器 + 终端
 
-这一步把原 v1.2 的"保存草稿 → 跑验证 → 加 frontmatter → 删重复 H1 → mv 正式目录 → 再跑验证"6 步合并成 1 步,因为 GPT 现在直接输出完整 Frontmatter Block,无需手动组装。
+这一步把早期流程里的"保存草稿 → 跑验证 → 加 frontmatter → 删重复 H1 → mv 正式目录 → 再跑验证"6 步合并成 1 步,因为 GPT 现在直接输出完整 Frontmatter Block,无需手动组装。
 
 ### 6.1 创建正式目录下的 md 文件
 
@@ -456,7 +443,7 @@ git push
 
 总计约 **40-80 分钟/篇**。
 
-vs v1.2 的优化:
+相对早期流程的优化:
 - 去掉 drafts/ 中间目录,去掉手动加 frontmatter + 删 H1 + mv 三个小步骤
 - 整篇文章生产流程从 15 步精简到 11 步
 
@@ -510,6 +497,6 @@ bash check-articles.sh --who-links /vietnam/[板块]/[slug]
 1. 不要在普通车道里“先试试看”。
 2. 不要用普通 Prompt 4 直接写深度文章。
 3. 切到 `ExpatGuide Deep Draft` 项目。
-4. 按 `deep-lane-3-window-ops-manual-v6-zh.md` 执行 GPT-only deep lane。
+4. 按 `deep-lane-3-window-ops-manual-v6.1-zh.md` 执行 GPT-only deep lane。
 
 普通车道 SOP 只负责把高风险题路由出去，不承接 deep lane 的写作、QA 或 patch。
