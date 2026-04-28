@@ -34,7 +34,8 @@ DEEP LANE BENCHMARK ARTICLE - 9/10 SCORING ANCHOR
 - description 长度 252 字符——超出 120-160 区间(本应 WARNING),但因实质信息密度高、
   涵盖了 5 层产品 + 5 个决策维度,属于 trade-off 决策。复核员遇到类似情况应判 WARNING
   并提示"description 较长,如需严格合规建议压缩到 160 内"
-- sidebar.label "Health Insurance Choice" 3 词,不重复"Healthcare"板块名 ✅
+- sidebar.label "Health Insurance Choice" 3 词,落在 2-5 词通常区间内,不重复"Healthcare"板块名 ✅
+  (按当前规则:通常 2-5 词;1 词仅高度明确时允许;最多 6 词)
 
 注:这是 9/10 文章在 frontmatter 维度的边缘案例。
 不是说超长 description 是好做法,而是说在其他维度全部 PASS 时,
