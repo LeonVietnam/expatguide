@@ -1,12 +1,6 @@
 ---
 title: "Vietnam Temporary Residence Card (TRC) Application Guide 2026"
 description: "A practical 2026 guide to applying for a Vietnam Temporary Residence Card. Updated fees under the new April 2026 regulations, full breakdown of LD, DT, and TT categories, the DT4 investor trap, and how to avoid the most common rejection reasons."
-tags:
-  - visa
-  - trc
-  - temporary-residence-card
-  - vietnam-immigration
-  - expat-guide
 sidebar:
   label: "TRC Application Guide"
 ---

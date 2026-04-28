@@ -200,7 +200,7 @@ Readers who miss the budget usually do not miss it because pho was too expensive
 - booking too many temporary stays instead of moving into a stable room
 - taking poor FX rates or dynamic currency conversion when withdrawing or paying with a foreign card
 
-That last point is easy to miss. A multi-currency setup such as the [Wise multi-currency card](https://wise.com/us/card/) can fit naturally into a tight-budget workflow because ATM withdrawals, card spending, and bad conversion choices can quietly raise monthly costs when the income is held in another currency. Readers who want the Vietnam card-acceptance side mapped out can see our [foreign cards in Vietnam guide](/vietnam/banking/international-cards-vietnam-2026).
+That last point is easy to miss. A multi-currency setup such as the [Wise multi-currency card](https://wise.com/invite/dic/ganqiuh) can fit naturally into a tight-budget workflow because ATM withdrawals, card spending, and bad conversion choices can quietly raise monthly costs when the income is held in another currency. Readers who want the Vietnam card-acceptance side mapped out can see our [foreign cards in Vietnam guide](/vietnam/banking/international-cards-vietnam-2026).
 
 ## Where Vietnam beats other cheap nomad bases, and where it does not
 

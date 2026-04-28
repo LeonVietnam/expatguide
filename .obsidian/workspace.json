@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "b27002283698043c",
+            "id": "4740272b3b58ec2d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -198,12 +198,16 @@
       "bases:新建数据库": false
     }
   },
-  "active": "b27002283698043c",
+  "active": "4740272b3b58ec2d",
   "lastOpenFiles": [
     "Research/vietnam-content-roadmap.md",
-    "src/content/docs/vietnam/visa/evisa-application-guide-2026.md",
     "Claude Project/review-failure-patterns.md",
+    "src/content/docs/vietnam/banking/atms-vietnam-expats-2026.md",
+    "未命名",
+    "Claude Project/benchmark-health-insurance-2026.md",
     "Research/deep-lane-3-window-ops-manual-v6.1-zh.md",
+    "src/content/docs/vietnam/visa/45-day-visa-exemption-vietnam-2026.md",
+    "src/content/docs/vietnam/visa/evisa-application-guide-2026.md",
     "Research/chatgpt-project-topology-and-instructions-v6.1-zh.md",
     "Research/deep-patch-verify-mini-spec-v4.1.md",
     "Research/deep-draft-window-spec-v5.4.md",
@@ -211,11 +215,9 @@
     "Research/operation-sop-v1.6-normal.md",
     "Research/deep-lane-3-window-ops-manual-v6-zh.md",
     "src/content/docs/vietnam/banking/english-online-banking-vietnam-banks-2026.md",
-    "Claude Project/benchmark-health-insurance-2026.md",
     "Claude Project/deep-lane-review-protocol.md",
     "Claude Project/deep-lane-review-constitution.md",
     "src/content/docs/vietnam/banking/exchange-currency-vietnam-2026.md",
-    "src/content/docs/vietnam/banking/atms-vietnam-expats-2026.md",
     "src/content/docs/vietnam/banking/send-money-within-vietnam-2026.md",
     "Claude Project",
     "Research/expatguide_deep_sop_gpt_v1.3.md",
@@ -224,8 +226,6 @@
     "Research/deep-risk-qa-mini-spec-v4.2.md",
     "Research/operation-sop-v1.5-normal.md",
     "src/content/docs/vietnam/visa/visa-run-guide-2026.md",
-    "Research/chatgpt-project-topology-and-instructions-v6-zh.md",
-    "Research/expatguide_sop_v2.52.md",
-    "Research/expatguide_deep_operation_sop_v2.0.md"
+    "Research/chatgpt-project-topology-and-instructions-v6-zh.md"
   ]
 }

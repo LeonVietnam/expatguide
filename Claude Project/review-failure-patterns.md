@@ -125,6 +125,20 @@ the e-visa checkpoint list."
 - 生效日紧随主题,使用 "dated X and effective from Y" 标准格式
 - 主语为法规本身,谓语为"supplemented / amended / established"等动词
 
+**修复成功示例 2 - 多国清单类法规**(45-day-visa-exemption-2026 patch 后):
+
+"Resolution No. 44/NQ-CP on visa exemption for citizens of the Federal 
+Republic of Germany, the French Republic, [...十二国全称...], when 
+entering Vietnam, dated 7 March 2025 and effective from its signing date, 
+covers citizens of: [国家清单]"
+
+句式要点:
+- 法规涵盖多国时,全名应展开 12 国全称(用国家正式名称,反映越南法规原文格式)
+- 主题描述紧接编号:"on visa exemption for citizens of [...]"
+- 适用期(policy window 2025-2028)与生效日清晰区分,避免压平
+- 国家正式名称(Federal Republic of Germany)与文中口语化清单(Germany)
+  并存,前者用于法规全名以保证 Tier 1 准确度,后者用于实操描述以保证可读性
+
 ---
 
 ### Pattern B2:法规生效日缺失(BLOCKING)
@@ -275,6 +289,8 @@ the e-visa checkpoint list."
 
 **复核员检查方式**:全文搜索 wise.com / safetywing.com / worldnomads.com,检查每个出现位置是否使用 affiliate 模板。
 
+
+
 ---
 
 ### Pattern G2:作者第一人称渗入(BLOCKING)
@@ -311,24 +327,58 @@ the e-visa checkpoint list."
 
 ---
 
+### Pattern G4:内链使用反引号代码块替代 markdown link 语法(BLOCKING)
+
+**症状**:文中提及内部文章时,使用 `` `/vietnam/[pillar]/[slug]` `` 反引号代码块格式,而非 constitution 第 6 节要求的 `[text](/path)` markdown link 标准语法。路径本身可能完全合规,slug 真实存在,但格式不会渲染为可点击链接。
+
+**首发出处**:vietnam-45-day-visa-exemption-2026
+- "see the broader `/vietnam/visa/visa-guide-2026`"
+- "see `/vietnam/visa/visa-run-guide-2026`"
+- "use `/vietnam/visa/evisa-application-guide-2026`"(出现 2 次)
+- "see `/vietnam/visa/trc-application-guide-2026`"
+- 全文 5 处内链全部使用此格式
+
+**为何是 BLOCKING**:Constitution 第 6 节明确规定"格式必须是 `[text](/path)`"。反引号代码块写法的实际后果:
+1. 不渲染为可点击链接,读者无法跳转
+2. 站内链接图谱断裂,损害 SEO 和 hub-spoke 架构
+3. Astro Starlight 不会把代码块路径识别为内链,影响 Plan B 站点架构执行
+4. 损害 expat E-E-A-T(读者预期专业站点的内链应可点击)
+
+与 Pattern G1(affiliate URL 退化)是对称问题:G1 是 URL 用错,G4 是格式用错。
+
+**与已有模式的区分**:
+- G1 关注 affiliate URL 退化为普通官网链接(URL 内容错)
+- G4 关注内链格式退化为代码块(URL 内容对,但 markdown 语法错)
+- 两者都是 BLOCKING,但触发场景和修复方向不同
+
+**正确写法**:
+- "see the broader [Vietnam Visa Guide 2026](/vietnam/visa/visa-guide-2026)"
+- 而非 "see the broader `/vietnam/visa/visa-guide-2026`"
+- anchor text 应自然描述性,反映目标文章主题,而非裸路径
+
+**复核员检查方式**:全文搜索 `` ` `` 反引号包裹的 `/vietnam/` 路径模式。任一命中 → 视为 Pattern G4 触发。建议复核员在维度 8 内链合规中**额外加一列"格式语法"**,与"路径合法性""真实存在性"并列检查。
+
+---
+
 ## 模式触发统计(Leon 维护)
 
 每次复核完成后,Leon 在此处更新触发计数。计数高的模式说明 Deep Draft 窗口的 SOP 仍有漏洞,值得反向回流到 Draft 侧。
 
-| 模式 | 触发文章数 | 最近触发 |
-|---|---:|---|
-| A1 模糊措辞引用 | 2 | domestic-money-transfer-2026 |
-| A2 硬数字无法规出处 | 2 | domestic-money-transfer-2026 |
-| A3 监管层"the amended X rules"模糊引用 | 1 | domestic-money-transfer-2026 |
-| B1 法规全名缺失 | 2 | domestic-money-transfer-2026 |
-| C1 落地信息不具名 | 1 | visa-run-2026 |
-| C2 默认方法缺 DDF 数据 | 1 | domestic-money-transfer-2026 |
-| D1 灰区压平 | 0 | — |
-| E1 软推荐表 | 0 | — |
-| F1 frontmatter 禁止字段 | 0 | — |
-| G1 affiliate URL 退化 | 0 | — |
-| G2 作者第一人称 | 0 | — |
-| G3 服务商共现违规 | 0 | — |
+| 模式                              | 触发文章数 | 最近触发                         |
+| ------------------------------- | ----: | ---------------------------- |
+| A1 模糊措辞引用                       |     2 | domestic-money-transfer-2026 |
+| A2 硬数字无法规出处                     |     2 | domestic-money-transfer-2026 |
+| A3 监管层"the amended X rules"模糊引用 |     1 | domestic-money-transfer-2026 |
+| B1 法规全名缺失                       |     2 | domestic-money-transfer-2026 |
+| C1 落地信息不具名                      |     1 | visa-run-2026                |
+| C2 默认方法缺 DDF 数据                 |     1 | domestic-money-transfer-2026 |
+| D1 灰区压平                         |     0 | —                            |
+| E1 软推荐表                         |     0 | —                            |
+| F1 frontmatter 禁止字段             |     0 | —                            |
+| G1 affiliate URL 退化             |     0 | —                            |
+| G2 作者第一人称                       |     0 | —                            |
+| G3 服务商共现违规                      |     0 | —                            |
+| G4 内链反引号替代 markdown link        |     1 | 45-day-visa-exemption-2026   |
 
 **反向回流触发条件**(Leon 决策点):
 - 单一模式触发 ≥ 3 次 → 应回流到 Deep Draft SOP,在起草侧加预防 prompt

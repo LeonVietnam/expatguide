@@ -1,14 +1,21 @@
 #!/bin/bash
 
-# ExpatGuide Article Quality Check Script v1.4
+# ExpatGuide Article Quality Check Script v1.5
 # 用法: 在项目根目录运行 bash check-articles.sh
 # 可选: bash check-articles.sh path/to/specific-file.md (只检查单篇)
 # 可选: bash check-articles.sh --who-links /vietnam/xxx/slug-name (查引用)
 #
-# v1.4 更新: 新增 OpenAI 内部引用标记检测 (ERROR)
-#   - :contentReference[oaicite:XX]{index=XX}
-#   - oaicite / {index= / 未替换的 【...】 锚点标记
+# v1.5 更新:
+#   - 新增反引号路径格式检测 (Pattern G4): 拦截 `/vietnam/...` 写法
+#   - 新增 frontmatter 字段白名单检测 (Pattern F1): 拦截 slug/lastUpdated 等禁止字段
+#   - 新增 frontmatter description 长度检测 (120-160 区间, WARN 级)
+#   - 新增 Affiliate URL 模板检测 (Pattern G1):
+#     * SafetyWing 必须用 referenceID=26505542 模板
+#     * Wise 必须用 invite/dic/ganqiuh 模板
+#     * World Nomads 占位符检测 (待 CJ URL 启用)
+#   - 第一人称地名白名单扩充: 新增 My Tho / My Son / My Dinh / Phu My Bridge
 #
+# v1.4 更新: OpenAI 内部引用标记检测 (ERROR)
 # v1.3 更新: 禁用词分硬禁用(ERROR) + 语境敏感(WARN) 两级
 
 DOCS_DIR="src/content/docs"
@@ -21,6 +28,11 @@ YELLOW='\033[1;33m'
 GREEN='\033[0;32m'
 CYAN='\033[0;36m'
 NC='\033[0m'
+
+# Affiliate URL 模板常量 (集中管理,便于以后更新)
+SW_AFFILIATE_MARKER="referenceID=26505542"
+WISE_AFFILIATE_MARKER="invite/dic/ganqiuh"
+WN_AFFILIATE_MARKER=""  # 待 CJ URL 启用后填入
 
 divider() {
   echo ""
@@ -101,19 +113,17 @@ if [ $ERRORS -eq $LINK_BEFORE ]; then
 fi
 
 # ============================================================
-# 2. OpenAI 内部引用标记检测 (v1.4 新增)
+# 2. OpenAI 内部引用标记检测
 # ============================================================
 divider "2. OpenAI 引用标记检测 (Citation Markers)"
 
 MARKER_BEFORE=$ERRORS
 for file in $FILES; do
-  # 检测所有可能的 OpenAI 内部引用标记模式
   markers=$(grep -nE "(:contentReference|oaicite|\{index=)" "$file" 2>/dev/null)
   
   if [ -n "$markers" ]; then
     while IFS= read -r match; do
       line_num=$(echo "$match" | cut -d: -f1)
-      # 提取匹配的具体标记
       line_text=$(echo "$match" | cut -d: -f2- | cut -c1-120)
       error "$file:$line_num → OpenAI 引用标记泄漏: $line_text"
     done <<< "$markers"
@@ -125,9 +135,100 @@ if [ $ERRORS -eq $MARKER_BEFORE ]; then
 fi
 
 # ============================================================
-# 3. 禁用词检测 (硬禁用 + 语境敏感)
+# 3. 反引号路径格式检测 (v1.5 新增 - Pattern G4)
 # ============================================================
-divider "3. 禁用词检测 (Banned Words)"
+divider "3. 反引号路径格式检测 (Backtick Internal Path)"
+
+BT_BEFORE=$ERRORS
+for file in $FILES; do
+  # 匹配反引号包裹的 /vietnam/ 开头路径
+  # 例: `/vietnam/visa/visa-guide-2026`
+  bt_paths=$(grep -nE '`/vietnam/[a-z0-9-]+/[a-z0-9-]+`' "$file" 2>/dev/null)
+  
+  if [ -n "$bt_paths" ]; then
+    while IFS= read -r match; do
+      line_num=$(echo "$match" | cut -d: -f1)
+      line_text=$(echo "$match" | cut -d: -f2- | cut -c1-150)
+      error "$file:$line_num → 内链使用反引号格式 (应改为 markdown link [text](path)): $line_text"
+    done <<< "$bt_paths"
+  fi
+  
+  # 同时检测裸路径 (无反引号也无 markdown link 包裹)
+  # 例: see /vietnam/visa/visa-guide-2026 directly
+  # 这部分用 WARN 级,因为可能误伤(比如 frontmatter 里的描述性提及)
+  # 排除 markdown link 内的路径 + 反引号内的路径
+  bare_paths=$(grep -nE '(^|[[:space:]])/vietnam/[a-z0-9-]+/[a-z0-9-]+([[:space:]]|$|\.|,)' "$file" 2>/dev/null | \
+    grep -vE '\]\(/vietnam/' | \
+    grep -vE '`/vietnam/')
+  
+  if [ -n "$bare_paths" ]; then
+    while IFS= read -r match; do
+      line_num=$(echo "$match" | cut -d: -f1)
+      line_text=$(echo "$match" | cut -d: -f2- | cut -c1-150)
+      # 排除 frontmatter 区块 (前 10 行的 description/title 等)
+      if [ "$line_num" -le 10 ]; then
+        continue
+      fi
+      warn "$file:$line_num → 裸路径未包裹 (建议用 markdown link): $line_text"
+    done <<< "$bare_paths"
+  fi
+done
+
+if [ $ERRORS -eq $BT_BEFORE ]; then
+  ok "没有发现反引号路径格式"
+fi
+
+# ============================================================
+# 4. Frontmatter 字段白名单检测 (v1.5 新增 - Pattern F1)
+# ============================================================
+divider "4. Frontmatter 白名单检测 (Forbidden Frontmatter Fields)"
+
+FORBIDDEN_FIELDS=("slug" "country" "city" "category" "tags" "lastUpdated" "date" "publishDate" "author" "draft")
+
+FM_BEFORE=$ERRORS
+for file in $FILES; do
+  # index.md/mdx 是 hub 页,字段规则可能不同,跳过严格检查
+  if [[ "$file" == *"index.md"* ]] || [[ "$file" == *"index.mdx"* ]]; then
+    continue
+  fi
+  
+  # 提取 frontmatter 区块 (开头第一个 --- 到第二个 ---)
+  fm=$(awk '/^---$/{c++; if(c==2) exit; next} c==1' "$file")
+  
+  if [ -z "$fm" ]; then
+    warn "$file → 未检测到 frontmatter 区块"
+    continue
+  fi
+  
+  # 检查禁止字段
+  for field in "${FORBIDDEN_FIELDS[@]}"; do
+    if echo "$fm" | grep -qE "^${field}:"; then
+      error "$file → frontmatter 含禁止字段: $field (白名单仅 title/description/sidebar.label)"
+    fi
+  done
+  
+  # description 长度检测 (WARN 级,因为 health-insurance 基准本身是 252 字符 trade-off)
+  desc=$(echo "$fm" | grep -m1 "^description:" | sed 's/^description:[[:space:]]*//' | sed 's/^["'"'"']//' | sed 's/["'"'"']$//')
+  if [ -n "$desc" ]; then
+    desc_len=${#desc}
+    if [ "$desc_len" -lt 120 ]; then
+      warn "$file → description 长度 $desc_len 字符,过短 (建议 120-160)"
+    elif [ "$desc_len" -gt 160 ]; then
+      warn "$file → description 长度 $desc_len 字符,过长 (建议 120-160,如有信息密度 trade-off 可保留)"
+    fi
+  else
+    warn "$file → frontmatter 缺 description 字段"
+  fi
+done
+
+if [ $ERRORS -eq $FM_BEFORE ]; then
+  ok "frontmatter 字段合规"
+fi
+
+# ============================================================
+# 5. 禁用词检测 (硬禁用 + 语境敏感)
+# ============================================================
+divider "5. 禁用词检测 (Banned Words)"
 
 HARD_BANNED=(
   "vibrant"
@@ -209,9 +310,9 @@ elif [ $ERRORS -eq $BANNED_BEFORE ]; then
 fi
 
 # ============================================================
-# 4. 标题年份检测
+# 6. 标题年份检测
 # ============================================================
-divider "4. 标题年份检测 (Year in Title)"
+divider "6. 标题年份检测 (Year in Title)"
 
 YEAR_BEFORE=$ERRORS
 for file in $FILES; do
@@ -235,14 +336,18 @@ if [ $ERRORS -eq $YEAR_BEFORE ]; then
 fi
 
 # ============================================================
-# 5. Affiliate 计数
+# 7. Affiliate 计数 + URL 模板检测 (v1.5 增强 - Pattern G1)
 # ============================================================
-divider "5. Affiliate 检测 (SafetyWing / Wise / World Nomads)"
+divider "7. Affiliate 检测 (SafetyWing / Wise / World Nomads)"
 
 AFF_BEFORE=$ERRORS
+
+# 7a. 计数检测 (沿用 v1.4 逻辑)
 for file in $FILES; do
+  # SafetyWing: 剔除 affiliate URL 内的 safetywing 字样,只数 anchor text + 自然提及
   sw_count=$(sed 's/(https:\/\/safetywing\.com[^)]*)//g' "$file" | grep -oi "safetywing" | wc -l | tr -d ' ')
   
+  # Wise: 排除 otherwise / likewise / wisdom 等假阳性
   wise_all=$(grep -oiE '\bwise\b' "$file" | wc -l | tr -d ' ')
   wise_false=$(grep -oiE '\b(otherwise|likewise|wisdom)\b' "$file" | wc -l | tr -d ' ')
   wise_brand=$((wise_all - wise_false))
@@ -275,14 +380,65 @@ for file in $FILES; do
   fi
 done
 
+# 7b. URL 模板检测 (v1.5 新增)
+for file in $FILES; do
+  # SafetyWing URL 检测
+  # 提取所有 safetywing.com URL
+  sw_urls=$(grep -noE 'https://safetywing\.com[^)[:space:]]*' "$file" 2>/dev/null)
+  if [ -n "$sw_urls" ]; then
+    while IFS= read -r match; do
+      line_num=$(echo "$match" | cut -d: -f1)
+      url=$(echo "$match" | cut -d: -f2-)
+      if ! echo "$url" | grep -q "$SW_AFFILIATE_MARKER"; then
+        error "$file:$line_num → SafetyWing 使用普通 URL,缺 affiliate 标记 ($SW_AFFILIATE_MARKER): $url"
+      fi
+    done <<< "$sw_urls"
+  fi
+  
+  # Wise URL 检测
+  wise_urls=$(grep -noE 'https://wise\.com[^)[:space:]]*' "$file" 2>/dev/null)
+  if [ -n "$wise_urls" ]; then
+    while IFS= read -r match; do
+      line_num=$(echo "$match" | cut -d: -f1)
+      url=$(echo "$match" | cut -d: -f2-)
+      if ! echo "$url" | grep -q "$WISE_AFFILIATE_MARKER"; then
+        error "$file:$line_num → Wise 使用普通 URL,缺 affiliate 标记 ($WISE_AFFILIATE_MARKER): $url"
+      fi
+    done <<< "$wise_urls"
+  fi
+  
+  # World Nomads 占位符检测
+  wn_placeholder=$(grep -nE '\[WORLDNOMADS_AFFILIATE_URL\]' "$file" 2>/dev/null)
+  if [ -n "$wn_placeholder" ]; then
+    while IFS= read -r match; do
+      line_num=$(echo "$match" | cut -d: -f1)
+      warn "$file:$line_num → World Nomads 仍为占位符,等待 CJ affiliate URL 启用"
+    done <<< "$wn_placeholder"
+  fi
+  
+  # World Nomads 普通 URL 检测 (CJ URL 启用前,任何 worldnomads.com 出现都标 ERROR)
+  wn_naked=$(grep -noE 'https://(www\.)?worldnomads\.com[^)[:space:]]*' "$file" 2>/dev/null)
+  if [ -n "$wn_naked" ]; then
+    while IFS= read -r match; do
+      line_num=$(echo "$match" | cut -d: -f1)
+      url=$(echo "$match" | cut -d: -f2-)
+      if [ -z "$WN_AFFILIATE_MARKER" ]; then
+        error "$file:$line_num → World Nomads URL 出现但 CJ affiliate URL 尚未启用,应改用占位符 [WORLDNOMADS_AFFILIATE_URL]: $url"
+      elif ! echo "$url" | grep -q "$WN_AFFILIATE_MARKER"; then
+        error "$file:$line_num → World Nomads 使用普通 URL,缺 affiliate 标记: $url"
+      fi
+    done <<< "$wn_naked"
+  fi
+done
+
 if [ $ERRORS -eq $AFF_BEFORE ]; then
-  ok "Affiliate 提及次数合规"
+  ok "Affiliate 提及次数与 URL 模板均合规"
 fi
 
 # ============================================================
-# 6. 第一人称检测
+# 8. 第一人称检测 (v1.5: 地名白名单扩充)
 # ============================================================
-divider "6. 第一人称检测 (First Person)"
+divider "8. 第一人称检测 (First Person)"
 
 FP_BEFORE=$ERRORS
 for file in $FILES; do
@@ -295,6 +451,7 @@ for file in $FILES; do
       continue
     fi
     
+    # 白名单: "our + 内链" 形式 (例: our [Vietnam visa guide](/vietnam/visa/...))
     if echo "$line_content" | grep -qiE '\bour\s+\[' && echo "$line_content" | grep -qE '\]\(/'; then
       cleaned=$(echo "$line_content" | sed -E 's/our \[[^]]*\]\([^)]*\)//gi')
       if ! echo "$cleaned" | grep -qiE '\b(my|we|our)\b'; then
@@ -302,12 +459,14 @@ for file in $FILES; do
       fi
     fi
     
+    # 白名单: FAQ 标题读者第一人称 (## Can I... / ### Do I...)
     if echo "$line_content" | grep -qE '^\s*(##|###|\*\*)' && echo "$line_content" | grep -qE '\?'; then
       continue
     fi
     
-    if echo "$line_content" | grep -qiE 'My An|My Khe|Phu My|Hoan My'; then
-      cleaned=$(echo "$line_content" | sed -E 's/(My An|My Khe|Phu My Hung|Phu My|Hoan My)//gi')
+    # 白名单: 越南地名含 "My" (v1.5 扩充)
+    if echo "$line_content" | grep -qiE 'My An|My Khe|Phu My|Hoan My|My Tho|My Son|My Dinh'; then
+      cleaned=$(echo "$line_content" | sed -E 's/(My An|My Khe|Phu My Hung|Phu My Bridge|Phu My|Hoan My|My Tho|My Son|My Dinh)//gi')
       if ! echo "$cleaned" | grep -qiE '\b(my)\b'; then
         continue
       fi
@@ -334,6 +493,7 @@ for file in $FILES; do
       continue
     fi
     
+    # 白名单: 缩写词 (AI/UI/ID/FDI/JCI/VNeID/I-XX)
     cleaned=$(echo "$line_content" | sed -E 's/\b(AI|UI|ID|FDI|JCI|VNeID|I-[0-9]+)\b//g')
     if ! echo "$cleaned" | grep -qE '\bI\b'; then
       continue
@@ -359,9 +519,9 @@ if [ $ERRORS -eq $FP_BEFORE ]; then
 fi
 
 # ============================================================
-# 7. 相对路径内链检测
+# 9. 相对路径内链检测
 # ============================================================
-divider "7. 相对路径内链检测 (Relative Links)"
+divider "9. 相对路径内链检测 (Relative Links)"
 
 REL_BEFORE=$ERRORS
 for file in $FILES; do
@@ -381,9 +541,9 @@ if [ $ERRORS -eq $REL_BEFORE ]; then
 fi
 
 # ============================================================
-# 8. 内链引用地图
+# 10. 内链引用地图
 # ============================================================
-divider "8. 内链引用地图 (Link Map)"
+divider "10. 内链引用地图 (Link Map)"
 
 echo ""
 echo "  每篇文章被引用次数:"
@@ -411,8 +571,10 @@ echo -e "  ${RED}Errors:   $ERRORS${NC}"
 echo -e "  ${YELLOW}Warnings: $WARNINGS${NC}"
 echo ""
 echo "  说明:"
-echo "  - ERROR  = 必须修复 (citation 标记、硬禁用词、断链、affiliate 超标、第一人称等)"
-echo "  - WARN   = 人工判断 (语境敏感词、孤立页面、可能的第一人称等)"
+echo "  - ERROR  = 必须修复 (citation 标记、硬禁用词、断链、affiliate URL/超标、"
+echo "             frontmatter 禁止字段、反引号路径、第一人称等)"
+echo "  - WARN   = 人工判断 (语境敏感词、孤立页面、可能的第一人称、description 长度、"
+echo "             裸路径、World Nomads 占位符等)"
 echo ""
 
 if [ $ERRORS -eq 0 ] && [ $WARNINGS -eq 0 ]; then

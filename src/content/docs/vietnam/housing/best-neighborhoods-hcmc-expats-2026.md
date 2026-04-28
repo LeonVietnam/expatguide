@@ -1,12 +1,6 @@
 ---
 title: "Best Neighborhoods in Ho Chi Minh City for Expats 2026"
 description: "A BS-free breakdown of where foreigners live in Saigon right now, factoring in the new Metro Line 1, the 2025 administrative district wipeout, and real rent prices."
-tags:
-  - housing
-  - ho-chi-minh-city
-  - saigon
-  - neighborhoods
-  - expat-guide
 sidebar:
   label: "Saigon: Where to Live"
 ---
